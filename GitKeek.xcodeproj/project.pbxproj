@@ -12,6 +12,7 @@
 		276C3BED1E6D661000814B2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276C3BEB1E6D661000814B2E /* Main.storyboard */; };
 		276C3BEF1E6D661000814B2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276C3BEE1E6D661000814B2E /* Assets.xcassets */; };
 		276C3BF21E6D661000814B2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276C3BF01E6D661000814B2E /* LaunchScreen.storyboard */; };
+		276C3BFA1E6D670B00814B2E /* StartupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276C3BF91E6D670B00814B2E /* StartupService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		276C3BEE1E6D661000814B2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276C3BF11E6D661000814B2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		276C3BF31E6D661000814B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		276C3BF91E6D670B00814B2E /* StartupService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				276C3BE71E6D661000814B2E /* AppDelegate.swift */,
+				276C3BF91E6D670B00814B2E /* StartupService.swift */,
 				276C3BE91E6D661000814B2E /* ViewController.swift */,
 				276C3BEB1E6D661000814B2E /* Main.storyboard */,
 				276C3BEE1E6D661000814B2E /* Assets.xcassets */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276C3BFA1E6D670B00814B2E /* StartupService.swift in Sources */,
 				276C3BEA1E6D661000814B2E /* ViewController.swift in Sources */,
 				276C3BE81E6D661000814B2E /* AppDelegate.swift in Sources */,
 			);
@@ -297,6 +301,7 @@
 				276C3BF81E6D661000814B2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
