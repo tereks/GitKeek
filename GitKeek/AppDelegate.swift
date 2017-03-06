@@ -12,10 +12,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var startup = StartupService()
+    var startup: StartupService!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        self.startup = StartupService(withWindow: window)
         self.startup.setup()
         
         return true
@@ -32,6 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        if let code = url.getParameter(byName: "code") {
+            GitHubOauthService.getAccessToken(withCode: code)
+        }
         return true
     }
 

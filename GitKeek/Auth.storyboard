@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bTd-FI-kmF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="XJj-Gn-rMV">
+            <objects>
+                <navigationController id="bTd-FI-kmF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="22n-Ds-26t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OFs-Fn-Gnn" kind="relationship" relationship="rootViewController" id="Eu1-3O-9j1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZDB-CT-CKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-314" y="-21"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="yAh-EQ-f52">
+            <objects>
+                <viewController storyboardIdentifier="AuthViewController" id="OFs-Fn-Gnn" customClass="AuthViewController" customModule="GitKeek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C0e-Eg-MtH"/>
+                        <viewControllerLayoutGuide type="bottom" id="DOe-vd-I8x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2w8-cM-q8b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Ico-GN-i2z">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcF-j7-lqv">
+                                <rect key="frame" x="50" y="308" width="275" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Rez-az-f6M"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="authButtonSelected:" destination="OFs-Fn-Gnn" eventType="touchUpInside" id="oCD-7K-eYV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AY-nA-kB0">
+                                <rect key="frame" x="50" y="279" width="275" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DOe-vd-I8x" firstAttribute="top" secondItem="Ico-GN-i2z" secondAttribute="bottom" id="0EF-zW-5I6"/>
+                            <constraint firstAttribute="trailing" secondItem="Ico-GN-i2z" secondAttribute="trailing" id="2wF-ci-gEB"/>
+                            <constraint firstItem="kcF-j7-lqv" firstAttribute="leading" secondItem="2w8-cM-q8b" secondAttribute="leading" constant="50" id="4KX-gC-VYL"/>
+                            <constraint firstItem="kcF-j7-lqv" firstAttribute="top" secondItem="3AY-nA-kB0" secondAttribute="bottom" constant="8" id="Mdv-Aa-tWT"/>
+                            <constraint firstItem="Ico-GN-i2z" firstAttribute="top" secondItem="2w8-cM-q8b" secondAttribute="top" id="VjT-r3-UnG"/>
+                            <constraint firstAttribute="trailing" secondItem="3AY-nA-kB0" secondAttribute="trailing" constant="50" id="d13-S8-4eW"/>
+                            <constraint firstItem="3AY-nA-kB0" firstAttribute="leading" secondItem="2w8-cM-q8b" secondAttribute="leading" constant="50" id="hCw-pn-X45"/>
+                            <constraint firstAttribute="trailing" secondItem="kcF-j7-lqv" secondAttribute="trailing" constant="50" id="per-4u-cha"/>
+                            <constraint firstItem="kcF-j7-lqv" firstAttribute="centerY" secondItem="2w8-cM-q8b" secondAttribute="centerY" id="uYY-st-0Ko"/>
+                            <constraint firstItem="Ico-GN-i2z" firstAttribute="leading" secondItem="2w8-cM-q8b" secondAttribute="leading" id="wzA-bM-3yA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ayq-3c-nzB"/>
+                    <connections>
+                        <outlet property="authButton" destination="kcF-j7-lqv" id="DVz-5T-r21"/>
+                        <outlet property="descLabel" destination="3AY-nA-kB0" id="WKp-54-r9i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="koZ-mf-mbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="-21.139430284857571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="320" height="480"/>
+    </resources>
+</document>

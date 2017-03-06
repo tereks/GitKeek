@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.3.0)
+  - PromiseKit (4.1.7):
+    - PromiseKit/Foundation (= 4.1.7)
+    - PromiseKit/QuartzCore (= 4.1.7)
+    - PromiseKit/UIKit (= 4.1.7)
+  - PromiseKit/CorePromise (4.1.7)
+  - PromiseKit/Foundation (4.1.7):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.1.7):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.1.7):
+    - PromiseKit/CorePromise
+  - SwiftRichString (0.9.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - PromiseKit
+  - SwiftRichString
+
+SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
+  SwiftRichString: f09656f5d44b07fc4423225f96eab43e463221e6
+
+PODFILE CHECKSUM: 6417d4bfcc66fac269693d7ba3970953f2bd8cd3
+
+COCOAPODS: 1.2.0

@@ -8,22 +8,70 @@
 
 /* Begin PBXBuildFile section */
 		276C3BE81E6D661000814B2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276C3BE71E6D661000814B2E /* AppDelegate.swift */; };
-		276C3BEA1E6D661000814B2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276C3BE91E6D661000814B2E /* ViewController.swift */; };
 		276C3BED1E6D661000814B2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276C3BEB1E6D661000814B2E /* Main.storyboard */; };
 		276C3BEF1E6D661000814B2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276C3BEE1E6D661000814B2E /* Assets.xcassets */; };
 		276C3BF21E6D661000814B2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276C3BF01E6D661000814B2E /* LaunchScreen.storyboard */; };
 		276C3BFA1E6D670B00814B2E /* StartupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276C3BF91E6D670B00814B2E /* StartupService.swift */; };
+		BE21F0B61E6D74DE005CE72B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0B51E6D74DE005CE72B /* Resource.swift */; };
+		BE21F0B81E6D7522005CE72B /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0B71E6D7522005CE72B /* Defaults.swift */; };
+		BE21F0BA1E6D7767005CE72B /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0B91E6D7767005CE72B /* Strings.swift */; };
+		BE21F0BE1E6D78D7005CE72B /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0BD1E6D78D7005CE72B /* AuthViewController.swift */; };
+		BE21F0C01E6D78E6005CE72B /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0BF1E6D78E6005CE72B /* AuthRouter.swift */; };
+		BE21F0C21E6D7932005CE72B /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0C11E6D7932005CE72B /* Auth.storyboard */; };
+		BE21F0C51E6D7B99005CE72B /* GitHubOauthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0C41E6D7B99005CE72B /* GitHubOauthService.swift */; };
+		BE21F0C71E6D7D8C005CE72B /* AuthTextDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0C61E6D7D8C005CE72B /* AuthTextDataSource.swift */; };
+		BE21F0D51E6D7DC1005CE72B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0C91E6D7DC1005CE72B /* Roboto-Black.ttf */; };
+		BE21F0D61E6D7DC1005CE72B /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0CA1E6D7DC1005CE72B /* Roboto-BlackItalic.ttf */; };
+		BE21F0D71E6D7DC1005CE72B /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0CB1E6D7DC1005CE72B /* Roboto-Bold.ttf */; };
+		BE21F0D81E6D7DC1005CE72B /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0CC1E6D7DC1005CE72B /* Roboto-BoldItalic.ttf */; };
+		BE21F0D91E6D7DC1005CE72B /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0CD1E6D7DC1005CE72B /* Roboto-Italic.ttf */; };
+		BE21F0DA1E6D7DC1005CE72B /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0CE1E6D7DC1005CE72B /* Roboto-Light.ttf */; };
+		BE21F0DB1E6D7DC1005CE72B /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0CF1E6D7DC1005CE72B /* Roboto-LightItalic.ttf */; };
+		BE21F0DC1E6D7DC1005CE72B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0D01E6D7DC1005CE72B /* Roboto-Medium.ttf */; };
+		BE21F0DD1E6D7DC1005CE72B /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0D11E6D7DC1005CE72B /* Roboto-MediumItalic.ttf */; };
+		BE21F0DE1E6D7DC1005CE72B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0D21E6D7DC1005CE72B /* Roboto-Regular.ttf */; };
+		BE21F0DF1E6D7DC1005CE72B /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0D31E6D7DC1005CE72B /* Roboto-Thin.ttf */; };
+		BE21F0E01E6D7DC1005CE72B /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0D41E6D7DC1005CE72B /* Roboto-ThinItalic.ttf */; };
+		BE21F0E31E6D907B005CE72B /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0E21E6D907B005CE72B /* Api.swift */; };
+		BE21F0E51E6DA771005CE72B /* URL+Param.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0E41E6DA771005CE72B /* URL+Param.swift */; };
+		BE21F0E71E6DB263005CE72B /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0E61E6DB263005CE72B /* NotificationCenter.swift */; };
+		F8459E2046B438A5B40664DA /* Pods_Abstract_GitKeek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027DF5E40822C3AA90965E64 /* Pods_Abstract_GitKeek.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		027DF5E40822C3AA90965E64 /* Pods_Abstract_GitKeek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstract_GitKeek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		276C3BE41E6D661000814B2E /* GitKeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitKeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		276C3BE71E6D661000814B2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		276C3BE91E6D661000814B2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		276C3BEC1E6D661000814B2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		276C3BEE1E6D661000814B2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276C3BF11E6D661000814B2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		276C3BF31E6D661000814B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276C3BF91E6D670B00814B2E /* StartupService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupService.swift; sourceTree = "<group>"; };
+		83716E37E8627E45E4C989B0 /* Pods-Abstract-GitKeek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract-GitKeek.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract-GitKeek/Pods-Abstract-GitKeek.debug.xcconfig"; sourceTree = "<group>"; };
+		BE21F0B51E6D74DE005CE72B /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		BE21F0B71E6D7522005CE72B /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		BE21F0B91E6D7767005CE72B /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		BE21F0BD1E6D78D7005CE72B /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		BE21F0BF1E6D78E6005CE72B /* AuthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		BE21F0C11E6D7932005CE72B /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		BE21F0C41E6D7B99005CE72B /* GitHubOauthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubOauthService.swift; sourceTree = "<group>"; };
+		BE21F0C61E6D7D8C005CE72B /* AuthTextDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthTextDataSource.swift; sourceTree = "<group>"; };
+		BE21F0C91E6D7DC1005CE72B /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		BE21F0CA1E6D7DC1005CE72B /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		BE21F0CB1E6D7DC1005CE72B /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		BE21F0CC1E6D7DC1005CE72B /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		BE21F0CD1E6D7DC1005CE72B /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		BE21F0CE1E6D7DC1005CE72B /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		BE21F0CF1E6D7DC1005CE72B /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		BE21F0D01E6D7DC1005CE72B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		BE21F0D11E6D7DC1005CE72B /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		BE21F0D21E6D7DC1005CE72B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		BE21F0D31E6D7DC1005CE72B /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		BE21F0D41E6D7DC1005CE72B /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		BE21F0E21E6D907B005CE72B /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		BE21F0E41E6DA771005CE72B /* URL+Param.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Param.swift"; sourceTree = "<group>"; };
+		BE21F0E61E6DB263005CE72B /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
+		CDBBF29151E61A96FC52568A /* Pods-Abstract-GitKeek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract-GitKeek.release.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract-GitKeek/Pods-Abstract-GitKeek.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8459E2046B438A5B40664DA /* Pods_Abstract_GitKeek.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +91,8 @@
 			children = (
 				276C3BE61E6D661000814B2E /* GitKeek */,
 				276C3BE51E6D661000814B2E /* Products */,
+				C8BBD4E129FC1B7BB9CE7FFC /* Pods */,
+				3AACE87CC7B7BCEB925F4F45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +109,108 @@
 			children = (
 				276C3BE71E6D661000814B2E /* AppDelegate.swift */,
 				276C3BF91E6D670B00814B2E /* StartupService.swift */,
-				276C3BE91E6D661000814B2E /* ViewController.swift */,
+				BE21F0BB1E6D78CD005CE72B /* Classes */,
+				BE21F0B41E6D74CC005CE72B /* Resources */,
 				276C3BEB1E6D661000814B2E /* Main.storyboard */,
+				BE21F0C11E6D7932005CE72B /* Auth.storyboard */,
 				276C3BEE1E6D661000814B2E /* Assets.xcassets */,
 				276C3BF01E6D661000814B2E /* LaunchScreen.storyboard */,
 				276C3BF31E6D661000814B2E /* Info.plist */,
 			);
 			path = GitKeek;
+			sourceTree = "<group>";
+		};
+		3AACE87CC7B7BCEB925F4F45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				027DF5E40822C3AA90965E64 /* Pods_Abstract_GitKeek.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE21F0B41E6D74CC005CE72B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BE21F0B51E6D74DE005CE72B /* Resource.swift */,
+				BE21F0B91E6D7767005CE72B /* Strings.swift */,
+				BE21F0B71E6D7522005CE72B /* Defaults.swift */,
+				BE21F0C81E6D7DC1005CE72B /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BE21F0BB1E6D78CD005CE72B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BE21F0C31E6D7B83005CE72B /* Common */,
+				BE21F0BC1E6D78CD005CE72B /* Auth */,
+				BE21F0E81E6DB2FD005CE72B /* User */,
+				BE21F0E11E6D906D005CE72B /* API */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BE21F0BC1E6D78CD005CE72B /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				BE21F0BD1E6D78D7005CE72B /* AuthViewController.swift */,
+				BE21F0BF1E6D78E6005CE72B /* AuthRouter.swift */,
+				BE21F0C61E6D7D8C005CE72B /* AuthTextDataSource.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		BE21F0C31E6D7B83005CE72B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BE21F0C41E6D7B99005CE72B /* GitHubOauthService.swift */,
+				BE21F0E41E6DA771005CE72B /* URL+Param.swift */,
+				BE21F0E61E6DB263005CE72B /* NotificationCenter.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BE21F0C81E6D7DC1005CE72B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BE21F0C91E6D7DC1005CE72B /* Roboto-Black.ttf */,
+				BE21F0CA1E6D7DC1005CE72B /* Roboto-BlackItalic.ttf */,
+				BE21F0CB1E6D7DC1005CE72B /* Roboto-Bold.ttf */,
+				BE21F0CC1E6D7DC1005CE72B /* Roboto-BoldItalic.ttf */,
+				BE21F0CD1E6D7DC1005CE72B /* Roboto-Italic.ttf */,
+				BE21F0CE1E6D7DC1005CE72B /* Roboto-Light.ttf */,
+				BE21F0CF1E6D7DC1005CE72B /* Roboto-LightItalic.ttf */,
+				BE21F0D01E6D7DC1005CE72B /* Roboto-Medium.ttf */,
+				BE21F0D11E6D7DC1005CE72B /* Roboto-MediumItalic.ttf */,
+				BE21F0D21E6D7DC1005CE72B /* Roboto-Regular.ttf */,
+				BE21F0D31E6D7DC1005CE72B /* Roboto-Thin.ttf */,
+				BE21F0D41E6D7DC1005CE72B /* Roboto-ThinItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BE21F0E11E6D906D005CE72B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				BE21F0E21E6D907B005CE72B /* Api.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		BE21F0E81E6DB2FD005CE72B /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		C8BBD4E129FC1B7BB9CE7FFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83716E37E8627E45E4C989B0 /* Pods-Abstract-GitKeek.debug.xcconfig */,
+				CDBBF29151E61A96FC52568A /* Pods-Abstract-GitKeek.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 276C3BF61E6D661000814B2E /* Build configuration list for PBXNativeTarget "GitKeek" */;
 			buildPhases = (
+				DBA114CADC297CF0FA8017D5 /* [CP] Check Pods Manifest.lock */,
 				276C3BE01E6D661000814B2E /* Sources */,
 				276C3BE11E6D661000814B2E /* Frameworks */,
 				276C3BE21E6D661000814B2E /* Resources */,
+				76E0FA2EA4FD8BEC0E124908 /* [CP] Embed Pods Frameworks */,
+				8A712ABE29AA8582293D2055 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,7 +275,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE21F0D71E6D7DC1005CE72B /* Roboto-Bold.ttf in Resources */,
+				BE21F0DB1E6D7DC1005CE72B /* Roboto-LightItalic.ttf in Resources */,
+				BE21F0DD1E6D7DC1005CE72B /* Roboto-MediumItalic.ttf in Resources */,
+				BE21F0D91E6D7DC1005CE72B /* Roboto-Italic.ttf in Resources */,
+				BE21F0DA1E6D7DC1005CE72B /* Roboto-Light.ttf in Resources */,
+				BE21F0C21E6D7932005CE72B /* Auth.storyboard in Resources */,
+				BE21F0D81E6D7DC1005CE72B /* Roboto-BoldItalic.ttf in Resources */,
+				BE21F0D61E6D7DC1005CE72B /* Roboto-BlackItalic.ttf in Resources */,
+				BE21F0DF1E6D7DC1005CE72B /* Roboto-Thin.ttf in Resources */,
+				BE21F0DE1E6D7DC1005CE72B /* Roboto-Regular.ttf in Resources */,
 				276C3BF21E6D661000814B2E /* LaunchScreen.storyboard in Resources */,
+				BE21F0DC1E6D7DC1005CE72B /* Roboto-Medium.ttf in Resources */,
+				BE21F0E01E6D7DC1005CE72B /* Roboto-ThinItalic.ttf in Resources */,
+				BE21F0D51E6D7DC1005CE72B /* Roboto-Black.ttf in Resources */,
 				276C3BEF1E6D661000814B2E /* Assets.xcassets in Resources */,
 				276C3BED1E6D661000814B2E /* Main.storyboard in Resources */,
 			);
@@ -134,13 +296,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		76E0FA2EA4FD8BEC0E124908 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Abstract-GitKeek/Pods-Abstract-GitKeek-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A712ABE29AA8582293D2055 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Abstract-GitKeek/Pods-Abstract-GitKeek-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBA114CADC297CF0FA8017D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		276C3BE01E6D661000814B2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				276C3BFA1E6D670B00814B2E /* StartupService.swift in Sources */,
-				276C3BEA1E6D661000814B2E /* ViewController.swift in Sources */,
+				BE21F0E51E6DA771005CE72B /* URL+Param.swift in Sources */,
+				BE21F0C71E6D7D8C005CE72B /* AuthTextDataSource.swift in Sources */,
+				BE21F0B61E6D74DE005CE72B /* Resource.swift in Sources */,
+				BE21F0B81E6D7522005CE72B /* Defaults.swift in Sources */,
+				BE21F0BE1E6D78D7005CE72B /* AuthViewController.swift in Sources */,
+				BE21F0E31E6D907B005CE72B /* Api.swift in Sources */,
+				BE21F0BA1E6D7767005CE72B /* Strings.swift in Sources */,
+				BE21F0E71E6DB263005CE72B /* NotificationCenter.swift in Sources */,
+				BE21F0C51E6D7B99005CE72B /* GitHubOauthService.swift in Sources */,
+				BE21F0C01E6D78E6005CE72B /* AuthRouter.swift in Sources */,
 				276C3BE81E6D661000814B2E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,9 +479,11 @@
 		};
 		276C3BF71E6D661000814B2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83716E37E8627E45E4C989B0 /* Pods-Abstract-GitKeek.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GitKeek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KS.GitKeek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,9 +493,11 @@
 		};
 		276C3BF81E6D661000814B2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDBBF29151E61A96FC52568A /* Pods-Abstract-GitKeek.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GitKeek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KS.GitKeek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
