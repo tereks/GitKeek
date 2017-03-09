@@ -10,7 +10,7 @@ import Foundation
 
 struct R {
     
-    static let BaseEndpoint: String = "https://github.com/login/oauth/"
+    static let BaseEndpoint = "https://github.com/login/oauth/"
     
     struct Credentials {
         static let clientId = "ef9e3e9918f5dd594388"
@@ -24,6 +24,10 @@ struct R {
                 UserDefaults.standard.set(newValue, forKey: S.accessToken)
             }
         }
+    }
+    
+    struct Text {
+        static let accessToken = "access_token"
     }
     
     struct Storyboard {

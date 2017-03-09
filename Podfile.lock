@@ -1,5 +1,10 @@
 PODS:
-  - Alamofire (4.3.0)
+  - Alamofire (4.4.0)
+  - Moya (8.0.2):
+    - Moya/Core (= 8.0.2)
+  - Moya/Core (8.0.2):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
   - PromiseKit (4.1.7):
     - PromiseKit/Foundation (= 4.1.7)
     - PromiseKit/QuartzCore (= 4.1.7)
@@ -11,18 +16,21 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (4.1.7):
     - PromiseKit/CorePromise
-  - SwiftRichString (0.9.4)
+  - Result (3.2.1)
+  - SwiftRichString (0.9.5)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.0)
-  - PromiseKit
+  - Moya
+  - PromiseKit (~> 4.0)
   - SwiftRichString
 
 SPEC CHECKSUMS:
-  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Moya: 47f61da5b634aa71f676431b64ee0f81e976296d
   PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
-  SwiftRichString: f09656f5d44b07fc4423225f96eab43e463221e6
+  Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
+  SwiftRichString: 6dc9a413f03b1761003ff4f6802c916b19159a6b
 
-PODFILE CHECKSUM: 6417d4bfcc66fac269693d7ba3970953f2bd8cd3
+PODFILE CHECKSUM: 935193b5c3891113cae6bca892649f807460315f
 
 COCOAPODS: 1.2.0

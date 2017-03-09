@@ -13,6 +13,10 @@ final class AuthViewController: UIViewController {
     @IBOutlet weak var authButton: UIButton!
     @IBOutlet weak var descLabel: UILabel!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +31,10 @@ final class AuthViewController: UIViewController {
     }
     
     @IBAction func authButtonSelected(_ sender: Any) {
-        GitHubOauthService.signIn(withClientId: R.Credentials.clientId)
+        if let oauthUrl = GithubService.shared.authorizeURL(withClientId: R.Credentials.clientId) {        
+            if UIApplication.shared.canOpenURL(oauthUrl) {
+                UIApplication.shared.openURL(oauthUrl)
+            }
+        }
     }
 }

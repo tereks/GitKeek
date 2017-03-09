@@ -34,7 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         if let code = url.getParameter(byName: "code") {
-            GitHubOauthService.getAccessToken(withCode: code)
+            let credentials = Credentials(clientId: R.Credentials.clientId, 
+                                          clientSecret: R.Credentials.clientSecret, 
+                                          code: code)
+            GithubService.shared.getAccessToken(credentials: credentials)
         }
         return true
     }

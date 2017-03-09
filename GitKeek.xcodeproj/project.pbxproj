@@ -18,7 +18,7 @@
 		BE21F0BE1E6D78D7005CE72B /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0BD1E6D78D7005CE72B /* AuthViewController.swift */; };
 		BE21F0C01E6D78E6005CE72B /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0BF1E6D78E6005CE72B /* AuthRouter.swift */; };
 		BE21F0C21E6D7932005CE72B /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0C11E6D7932005CE72B /* Auth.storyboard */; };
-		BE21F0C51E6D7B99005CE72B /* GitHubOauthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0C41E6D7B99005CE72B /* GitHubOauthService.swift */; };
+		BE21F0C51E6D7B99005CE72B /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0C41E6D7B99005CE72B /* GithubService.swift */; };
 		BE21F0C71E6D7D8C005CE72B /* AuthTextDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0C61E6D7D8C005CE72B /* AuthTextDataSource.swift */; };
 		BE21F0D51E6D7DC1005CE72B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0C91E6D7DC1005CE72B /* Roboto-Black.ttf */; };
 		BE21F0D61E6D7DC1005CE72B /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0CA1E6D7DC1005CE72B /* Roboto-BlackItalic.ttf */; };
@@ -32,9 +32,9 @@
 		BE21F0DE1E6D7DC1005CE72B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0D21E6D7DC1005CE72B /* Roboto-Regular.ttf */; };
 		BE21F0DF1E6D7DC1005CE72B /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0D31E6D7DC1005CE72B /* Roboto-Thin.ttf */; };
 		BE21F0E01E6D7DC1005CE72B /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0D41E6D7DC1005CE72B /* Roboto-ThinItalic.ttf */; };
-		BE21F0E31E6D907B005CE72B /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0E21E6D907B005CE72B /* Api.swift */; };
 		BE21F0E51E6DA771005CE72B /* URL+Param.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0E41E6DA771005CE72B /* URL+Param.swift */; };
 		BE21F0E71E6DB263005CE72B /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0E61E6DB263005CE72B /* NotificationCenter.swift */; };
+		BE21F0F01E7066E0005CE72B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0EF1E7066DF005CE72B /* Credentials.swift */; };
 		F8459E2046B438A5B40664DA /* Pods_Abstract_GitKeek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027DF5E40822C3AA90965E64 /* Pods_Abstract_GitKeek.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +54,7 @@
 		BE21F0BD1E6D78D7005CE72B /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		BE21F0BF1E6D78E6005CE72B /* AuthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
 		BE21F0C11E6D7932005CE72B /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
-		BE21F0C41E6D7B99005CE72B /* GitHubOauthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubOauthService.swift; sourceTree = "<group>"; };
+		BE21F0C41E6D7B99005CE72B /* GithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
 		BE21F0C61E6D7D8C005CE72B /* AuthTextDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthTextDataSource.swift; sourceTree = "<group>"; };
 		BE21F0C91E6D7DC1005CE72B /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		BE21F0CA1E6D7DC1005CE72B /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -68,9 +68,9 @@
 		BE21F0D21E6D7DC1005CE72B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		BE21F0D31E6D7DC1005CE72B /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		BE21F0D41E6D7DC1005CE72B /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
-		BE21F0E21E6D907B005CE72B /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		BE21F0E41E6DA771005CE72B /* URL+Param.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Param.swift"; sourceTree = "<group>"; };
 		BE21F0E61E6DB263005CE72B /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
+		BE21F0EF1E7066DF005CE72B /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		CDBBF29151E61A96FC52568A /* Pods-Abstract-GitKeek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract-GitKeek.release.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract-GitKeek/Pods-Abstract-GitKeek.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,7 +145,6 @@
 				BE21F0C31E6D7B83005CE72B /* Common */,
 				BE21F0BC1E6D78CD005CE72B /* Auth */,
 				BE21F0E81E6DB2FD005CE72B /* User */,
-				BE21F0E11E6D906D005CE72B /* API */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -163,7 +162,8 @@
 		BE21F0C31E6D7B83005CE72B /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				BE21F0C41E6D7B99005CE72B /* GitHubOauthService.swift */,
+				BE21F0EF1E7066DF005CE72B /* Credentials.swift */,
+				BE21F0C41E6D7B99005CE72B /* GithubService.swift */,
 				BE21F0E41E6DA771005CE72B /* URL+Param.swift */,
 				BE21F0E61E6DB263005CE72B /* NotificationCenter.swift */,
 			);
@@ -187,14 +187,6 @@
 				BE21F0D41E6D7DC1005CE72B /* Roboto-ThinItalic.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		BE21F0E11E6D906D005CE72B /* API */ = {
-			isa = PBXGroup;
-			children = (
-				BE21F0E21E6D907B005CE72B /* Api.swift */,
-			);
-			path = API;
 			sourceTree = "<group>";
 		};
 		BE21F0E81E6DB2FD005CE72B /* User */ = {
@@ -353,12 +345,12 @@
 				BE21F0E51E6DA771005CE72B /* URL+Param.swift in Sources */,
 				BE21F0C71E6D7D8C005CE72B /* AuthTextDataSource.swift in Sources */,
 				BE21F0B61E6D74DE005CE72B /* Resource.swift in Sources */,
+				BE21F0F01E7066E0005CE72B /* Credentials.swift in Sources */,
 				BE21F0B81E6D7522005CE72B /* Defaults.swift in Sources */,
 				BE21F0BE1E6D78D7005CE72B /* AuthViewController.swift in Sources */,
-				BE21F0E31E6D907B005CE72B /* Api.swift in Sources */,
 				BE21F0BA1E6D7767005CE72B /* Strings.swift in Sources */,
 				BE21F0E71E6DB263005CE72B /* NotificationCenter.swift in Sources */,
-				BE21F0C51E6D7B99005CE72B /* GitHubOauthService.swift in Sources */,
+				BE21F0C51E6D7B99005CE72B /* GithubService.swift in Sources */,
 				BE21F0C01E6D78E6005CE72B /* AuthRouter.swift in Sources */,
 				276C3BE81E6D661000814B2E /* AppDelegate.swift in Sources */,
 			);

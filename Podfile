@@ -4,7 +4,7 @@ use_frameworks!
 abstract_target 'Abstract' do
  
   pod 'SwiftRichString'
-  pod 'Alamofire', '~> 4.0'
+  pod 'Moya'
   pod 'PromiseKit', '~> 4.0'
 
 target 'GitKeek'
