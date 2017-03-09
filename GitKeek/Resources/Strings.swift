@@ -13,4 +13,6 @@ struct S {
     
     static let authTitle = "Press Sign In, enter your github credentials"
     static let signIn = "Sign In"
+    
+    static let url = "url"
 }

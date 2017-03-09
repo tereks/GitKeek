@@ -23,8 +23,7 @@ struct StartupService {
             return 
         }
         
-//        self.window?.rootViewController = AppDependencies.mainControllerWithDrawer()
+        self.window?.rootViewController = MainRouter.mainTabController()
         self.window?.backgroundColor = .white
-    }   
-    
+    }
 }

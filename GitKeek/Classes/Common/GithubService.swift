@@ -22,9 +22,10 @@ private func JSONResponseDataFormatter(_ data: Data) -> Data {
 
 enum Github {
     case accessToken(credentials: Credentials)
+    case repos
 }
 
-extension Github: TargetType {
+extension Github: TargetType, AccessTokenAuthorizable {
     var baseURL: URL { 
         return URL(string: R.BaseEndpoint)! 
     }
@@ -33,6 +34,8 @@ extension Github: TargetType {
         switch self {
         case .accessToken:
             return "/access_token"
+        case .repos:
+            return "/user/repos"
         }
     }
     
@@ -53,6 +56,15 @@ extension Github: TargetType {
                     "code": credentials.code]            
         default:
             return nil
+        }
+    }
+    
+    var shouldAuthorize: Bool {
+        switch self {
+        case .accessToken:
+            return false
+        default:
+            return true
         }
     }
     
@@ -84,15 +96,12 @@ final class GithubService {
     private init() {
     }
     
-    var provider = MoyaProvider<Github>()
+    var authPlugin = AccessTokenPlugin(token: R.Credentials.accessToken)
+    var provider = MoyaProvider<Github>(plugins: [authPlugin])
     
-    func authorizeURL(withClientId clientId: String) -> URL? {        
-        let oauthPath = R.BaseEndpoint + "authorize?client_id=\(clientId)&scope=user%20public_repo"
-        
-        guard let oauthUrl = URL(string: oauthPath) else {
-            return nil
-        }
-        return oauthUrl
+    func authorizeAddress(withClientId clientId: String) -> String {
+        let address = R.BaseEndpoint + "authorize?client_id=\(clientId)&scope=user%20public_repo"
+        return address
     }
     
     func getAccessToken(credentials: Credentials) -> Promise<String> {

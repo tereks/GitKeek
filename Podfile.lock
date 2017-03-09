@@ -16,21 +16,24 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (4.1.7):
     - PromiseKit/CorePromise
+  - PTPopupWebView (0.4.0)
   - Result (3.2.1)
   - SwiftRichString (0.9.5)
 
 DEPENDENCIES:
   - Moya
   - PromiseKit (~> 4.0)
+  - PTPopupWebView
   - SwiftRichString
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Moya: 47f61da5b634aa71f676431b64ee0f81e976296d
   PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
+  PTPopupWebView: 9db92ddc0629ed735dee23d4388d67b18158d55c
   Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
   SwiftRichString: 6dc9a413f03b1761003ff4f6802c916b19159a6b
 
-PODFILE CHECKSUM: 935193b5c3891113cae6bca892649f807460315f
+PODFILE CHECKSUM: ea68b9203b1b0b82e6b570537188a30ad7c3fcba
 
 COCOAPODS: 1.2.0

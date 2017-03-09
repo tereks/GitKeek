@@ -14,6 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var startup: StartupService!
 
+    class func shared() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.startup = StartupService(withWindow: window)
@@ -33,12 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        if let code = url.getParameter(byName: "code") {
-            let credentials = Credentials(clientId: R.Credentials.clientId, 
-                                          clientSecret: R.Credentials.clientSecret, 
-                                          code: code)
-            GithubService.shared.getAccessToken(credentials: credentials)
-        }
+        NotificationCenter.default.post(name: .openUrlNotification, object: nil, userInfo: [S.url: url])
         return true
     }
 

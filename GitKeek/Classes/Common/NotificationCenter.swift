@@ -10,4 +10,5 @@ import Foundation
 
 extension Notification.Name {
     static let accessTokenNotification = Notification.Name("cartNotification")
+    static let openUrlNotification = Notification.Name("openUrlNotification")
 }

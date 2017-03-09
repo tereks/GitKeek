@@ -12,6 +12,8 @@
 		276C3BEF1E6D661000814B2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276C3BEE1E6D661000814B2E /* Assets.xcassets */; };
 		276C3BF21E6D661000814B2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276C3BF01E6D661000814B2E /* LaunchScreen.storyboard */; };
 		276C3BFA1E6D670B00814B2E /* StartupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276C3BF91E6D670B00814B2E /* StartupService.swift */; };
+		278DA26C1E71509900B20DE5 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DA26B1E71509900B20DE5 /* ReposViewController.swift */; };
+		278DA26E1E71518E00B20DE5 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DA26D1E71518E00B20DE5 /* MainRouter.swift */; };
 		BE21F0B61E6D74DE005CE72B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0B51E6D74DE005CE72B /* Resource.swift */; };
 		BE21F0B81E6D7522005CE72B /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0B71E6D7522005CE72B /* Defaults.swift */; };
 		BE21F0BA1E6D7767005CE72B /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0B91E6D7767005CE72B /* Strings.swift */; };
@@ -47,6 +49,8 @@
 		276C3BF11E6D661000814B2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		276C3BF31E6D661000814B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276C3BF91E6D670B00814B2E /* StartupService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupService.swift; sourceTree = "<group>"; };
+		278DA26B1E71509900B20DE5 /* ReposViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
+		278DA26D1E71518E00B20DE5 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		83716E37E8627E45E4C989B0 /* Pods-Abstract-GitKeek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract-GitKeek.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract-GitKeek/Pods-Abstract-GitKeek.debug.xcconfig"; sourceTree = "<group>"; };
 		BE21F0B51E6D74DE005CE72B /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		BE21F0B71E6D7522005CE72B /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
@@ -120,6 +124,15 @@
 			path = GitKeek;
 			sourceTree = "<group>";
 		};
+		278DA26A1E71508600B20DE5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				278DA26B1E71509900B20DE5 /* ReposViewController.swift */,
+				278DA26D1E71518E00B20DE5 /* MainRouter.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		3AACE87CC7B7BCEB925F4F45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +157,7 @@
 			children = (
 				BE21F0C31E6D7B83005CE72B /* Common */,
 				BE21F0BC1E6D78CD005CE72B /* Auth */,
-				BE21F0E81E6DB2FD005CE72B /* User */,
+				278DA26A1E71508600B20DE5 /* Main */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -187,13 +200,6 @@
 				BE21F0D41E6D7DC1005CE72B /* Roboto-ThinItalic.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		BE21F0E81E6DB2FD005CE72B /* User */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = User;
 			sourceTree = "<group>";
 		};
 		C8BBD4E129FC1B7BB9CE7FFC /* Pods */ = {
@@ -240,6 +246,7 @@
 				TargetAttributes = {
 					276C3BE31E6D661000814B2E = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = LBZQVL5BBX;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -342,8 +349,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				276C3BFA1E6D670B00814B2E /* StartupService.swift in Sources */,
+				278DA26E1E71518E00B20DE5 /* MainRouter.swift in Sources */,
 				BE21F0E51E6DA771005CE72B /* URL+Param.swift in Sources */,
 				BE21F0C71E6D7D8C005CE72B /* AuthTextDataSource.swift in Sources */,
+				278DA26C1E71509900B20DE5 /* ReposViewController.swift in Sources */,
 				BE21F0B61E6D74DE005CE72B /* Resource.swift in Sources */,
 				BE21F0F01E7066E0005CE72B /* Credentials.swift in Sources */,
 				BE21F0B81E6D7522005CE72B /* Defaults.swift in Sources */,
@@ -474,6 +483,7 @@
 			baseConfigurationReference = 83716E37E8627E45E4C989B0 /* Pods-Abstract-GitKeek.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LBZQVL5BBX;
 				INFOPLIST_FILE = GitKeek/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -488,6 +498,7 @@
 			baseConfigurationReference = CDBBF29151E61A96FC52568A /* Pods-Abstract-GitKeek.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LBZQVL5BBX;
 				INFOPLIST_FILE = GitKeek/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

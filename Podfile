@@ -7,6 +7,8 @@ abstract_target 'Abstract' do
   pod 'Moya'
   pod 'PromiseKit', '~> 4.0'
 
+  pod 'PTPopupWebView'
+
 target 'GitKeek'
 
 end

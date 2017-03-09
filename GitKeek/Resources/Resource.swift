@@ -41,4 +41,6 @@ struct R {
         static let RobotoMedium = "Roboto-Medium"
         static let RobotoBold = "Roboto-Bold"
     }
+    
+    static let Scheme = "gitkeek://"
 }
