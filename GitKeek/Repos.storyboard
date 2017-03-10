@@ -12,7 +12,9 @@
         <scene sceneID="qLM-TZ-Rmr">
             <objects>
                 <navigationController id="JpC-7J-JJV" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="at5-OW-to3">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="at5-OW-to3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -35,9 +37,28 @@
                     <view key="view" contentMode="scaleToFill" id="KPf-ID-Rn7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jy0-2o-qPy">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RcP-9J-txi" id="kKT-lm-4uJ"/>
+                                    <outlet property="delegate" destination="RcP-9J-txi" id="er4-Un-P1s"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jy0-2o-qPy" firstAttribute="leading" secondItem="KPf-ID-Rn7" secondAttribute="leading" id="Fjw-He-tM1"/>
+                            <constraint firstItem="Jy0-2o-qPy" firstAttribute="top" secondItem="R91-xz-H7X" secondAttribute="bottom" id="LIv-zH-aUi"/>
+                            <constraint firstItem="ha4-D5-Hgi" firstAttribute="top" secondItem="Jy0-2o-qPy" secondAttribute="bottom" id="NWd-Qy-32H"/>
+                            <constraint firstAttribute="trailing" secondItem="Jy0-2o-qPy" secondAttribute="trailing" id="UGu-AR-fSl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sZM-bw-TMf"/>
+                    <connections>
+                        <outlet property="tableView" destination="Jy0-2o-qPy" id="pMM-RG-Yy6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6S-4W-Jq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

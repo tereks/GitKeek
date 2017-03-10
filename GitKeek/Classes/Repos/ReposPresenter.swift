@@ -15,6 +15,16 @@ final class ReposPresenter {
     var router: ReposRouter!
     
     func setup() {
+    
+    }
+    
+    func update() {
+        DispatchQueue.once(token: "reload") {
+            self.reload()
+        }
+    }
+    
+    func reload() {
         self.interactor.loadRepositories()
         .catch { error in
             self.view.hideHUD()
