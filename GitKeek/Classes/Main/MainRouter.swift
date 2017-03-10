@@ -10,9 +10,9 @@ import UIKit
 
 final class MainRouter {
     
-    class func mainTabController() -> UITabBarController {
+    class func mainTabController() -> MainTabbarController {
         let storyboard = UIStoryboard(name: R.Storyboard.Main, bundle: nil)
-        guard let tabbarController = storyboard.instantiateInitialViewController() as? UITabBarController else {
+        guard let tabbarController = storyboard.instantiateInitialViewController() as? MainTabbarController else {
             fatalError("Main Storyboard error")
         }
         return tabbarController

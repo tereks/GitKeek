@@ -18,6 +18,8 @@ struct StartupService {
     }
     
     func setup() {
+        GithubService.shared.configure()
+        
         if R.Credentials.accessToken.isEmpty {
             self.window?.rootViewController = AuthRouter.controller()
             return 

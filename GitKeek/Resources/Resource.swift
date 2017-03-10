@@ -10,7 +10,8 @@ import Foundation
 
 struct R {
     
-    static let BaseEndpoint = "https://github.com/login/oauth/"
+    static let WebEndpoint = "https://github.com"
+    static let BaseEndpoint = "https://api.github.com"
     
     struct Credentials {
         static let clientId = "ef9e3e9918f5dd594388"
@@ -33,6 +34,7 @@ struct R {
     struct Storyboard {
         static let Auth = "Auth"
         static let Main = "Main"
+        static let Repos = "Repos"
     }
     
     struct Font {

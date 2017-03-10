@@ -15,4 +15,7 @@ struct S {
     static let signIn = "Sign In"
     
     static let url = "url"
+    static let ok = "OK"
+    
+    static let error = "Error"
 }

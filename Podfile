@@ -8,6 +8,9 @@ abstract_target 'Abstract' do
   pod 'PromiseKit', '~> 4.0'
 
   pod 'PTPopupWebView'
+  pod 'PKHUD', '~> 4.0'
+
+  pod 'Marshal'
 
 target 'GitKeek'
 

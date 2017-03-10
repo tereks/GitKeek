@@ -9,31 +9,32 @@
 import UIKit
 import Moya
 import PromiseKit
+import Marshal
 
-private func JSONResponseDataFormatter(_ data: Data) -> Data {
-    do {
-        let dataAsJSON = try JSONSerialization.jsonObject(with: data)
-        let prettyData =  try JSONSerialization.data(withJSONObject: dataAsJSON, options: .prettyPrinted)
-        return prettyData
-    } catch {
-        return data
-    }
-}
 
 enum Github {
     case accessToken(credentials: Credentials)
     case repos
 }
 
+enum ApiError: Swift.Error {
+    case ResponseValidationFailed
+}
+
 extension Github: TargetType, AccessTokenAuthorizable {
-    var baseURL: URL { 
-        return URL(string: R.BaseEndpoint)! 
+    var baseURL: URL {
+        switch self {
+        case .accessToken:
+            return URL(string: R.WebEndpoint)!
+        default:
+            return URL(string: R.BaseEndpoint)!
+        }
     }
     
     var path: String {
         switch self {
         case .accessToken:
-            return "/access_token"
+            return "/login/oauth/access_token"
         case .repos:
             return "/user/repos"
         }
@@ -41,10 +42,8 @@ extension Github: TargetType, AccessTokenAuthorizable {
     
     var method: Moya.Method {
         switch self {
-        case .accessToken:
+        case .accessToken, .repos:
             return .get
-        default:
-            return .post
         }
     }
     
@@ -53,8 +52,8 @@ extension Github: TargetType, AccessTokenAuthorizable {
         case .accessToken(let credentials):
             return ["client_id": credentials.clientId, 
                     "client_secret": credentials.clientSecret,
-                    "code": credentials.code]            
-        default:
+                    "code": credentials.code]
+        case .repos:
             return nil
         }
     }
@@ -96,11 +95,17 @@ final class GithubService {
     private init() {
     }
     
-    var authPlugin = AccessTokenPlugin(token: R.Credentials.accessToken)
-    var provider = MoyaProvider<Github>(plugins: [authPlugin])
+    var authPlugin: AccessTokenPlugin!
+    var provider: MoyaProvider<Github>!
+    let logger = NetworkLoggerPlugin()
+    
+    func configure() {
+        self.authPlugin = AccessTokenPlugin(token: R.Credentials.accessToken)
+        self.provider = MoyaProvider<Github>(plugins: [authPlugin, logger])
+    }
     
     func authorizeAddress(withClientId clientId: String) -> String {
-        let address = R.BaseEndpoint + "authorize?client_id=\(clientId)&scope=user%20public_repo"
+        let address = R.WebEndpoint + "/login/oauth/authorize?client_id=\(clientId)&scope=user%20public_repo"
         return address
     }
     
@@ -124,6 +129,24 @@ final class GithubService {
                     reject(error)
                 }                
             }            
+        }
+    }
+    
+    func getRepos() -> Promise<[Repo]> {
+        return Promise { fulfill, reject in
+            provider.request(.repos) { result in
+                switch result {
+                case let .success(response):
+                    do {
+                        let repos: [Repo] = try response.mapArray(of: Repo.self)
+                        fulfill(repos)
+                    } catch {
+                        reject(ApiError.ResponseValidationFailed)
+                    }
+                case let .failure(error):
+                    reject(error)
+                }
+            }
         }
     }
 }

@@ -16,9 +16,14 @@ final class AuthRouter: NSObject {
             return nil
         }
         
-        guard let _ = navController.topViewController as? AuthViewController else {
+        guard let controller = navController.topViewController as? AuthViewController else {
             return nil
         }
+        
+        let presenter = AuthPresenter()
+        
+        presenter.view = controller
+        controller.presenter = presenter
         
         return navController
     }

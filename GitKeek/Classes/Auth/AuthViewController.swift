@@ -9,11 +9,14 @@
 import UIKit
 import PTPopupWebView
 import PromiseKit
+import PKHUD
 
-final class AuthViewController: UIViewController {
+final class AuthViewController: UIViewController, AuthInterface {
 
     @IBOutlet weak var authButton: UIButton!
     @IBOutlet weak var descLabel: UILabel!
+    
+    var presenter: AuthPresenter!
     
     let popupvc = PTPopupWebViewController()
         .popupAppearStyle(.pop(0.2, true))
@@ -26,13 +29,19 @@ final class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        authButton.setAttributedTitle(AuthTextDataSource.SignIn, for: .normal)
-        descLabel.attributedText = AuthTextDataSource.title
-        
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(self.applicationOpenedViaScheme(notification:)),
-                                               name: .openUrlNotification,
-                                               object: nil)
+        presenter.setup()
+    }
+    
+    func setAttributedMessage(_ text: NSAttributedString) {
+        descLabel.attributedText = text
+    }
+    
+    func setSignInAttributedTitle(_ text: NSAttributedString) {
+        authButton.setAttributedTitle(text, for: .normal)
+    }
+    
+    func hidePopup() {
+        popupvc.close()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -45,28 +54,5 @@ final class AuthViewController: UIViewController {
         let _ = popupvc.popupView.URL(string: oauthAddress)
         let _ = popupvc.popupView.addExternalLinkPattern(.URLScheme)
         popupvc.show()
-    }
-    
-    dynamic func applicationOpenedViaScheme(notification: Notification) {
-        popupvc.close()
-        
-        guard let userInfo = notification.userInfo,
-            let url = userInfo[S.url] as? URL,
-            let code = url.getParameter(byName: "code") else {
-            return
-        }
-        
-        let credentials = Credentials(clientId: R.Credentials.clientId,
-                                      clientSecret: R.Credentials.clientSecret,
-                                      code: code)
-        GithubService.shared.getAccessToken(credentials: credentials)
-        .then { accessToken -> Void in
-            guard accessToken.characters.count > 0 else {
-                return
-            }
-            R.Credentials.accessToken = accessToken
-            
-            MainRouter.pushMainController(withNavigationController: self.navigationController)
-        }
     }
 }
