@@ -10,4 +10,7 @@ import UIKit
 
 protocol ReposInterface: Awaiting, Alarming {
 
+    func reloadRepos()
+    func setViewTitle(_ title: String)
+    
 }

@@ -11,6 +11,8 @@ abstract_target 'Abstract' do
   pod 'PKHUD', '~> 4.0'
 
   pod 'Marshal'
+  pod 'Cartography'
+  pod 'Kingfisher'
 
 target 'GitKeek'
 

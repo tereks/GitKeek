@@ -45,4 +45,10 @@ struct R {
     }
     
     static let Scheme = "gitkeek://"
+    
+    struct L10 {
+        static let repos = "Repositories"
+        static let forks = "Forks"
+        static let watchers = "Watchers"
+    }
 }

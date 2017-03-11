@@ -11,28 +11,25 @@ import UIKit
 final class ReposRouter {
     
     class func controller() -> UINavigationController {
-        let storyboard = UIStoryboard(name: R.Storyboard.Repos, bundle: nil)
-        guard let navController = storyboard.instantiateInitialViewController() as? UINavigationController else {
-            fatalError("Wrong InitialViewController")
-        }
         
-        guard let controller = navController.topViewController as? ReposViewController else {
-            fatalError("Wrong controller")
-        }
+        let controller = ReposViewController()
+        let navController = UINavigationController(rootViewController: controller)
         
         let presenter = ReposPresenter()
         let router = ReposRouter()
         let interactor = ReposInteractor()
         
+        controller.presenter = presenter
+        
         presenter.view = controller
         presenter.router = router
         presenter.interactor = interactor
         
-        controller.presenter = presenter
-        
         return navController
     }
-    
-    class func pushMainController(withNavigationController nvc: UINavigationController?) {
+        
+    func openRepoController(withNavigationController nvc: UINavigationController,
+                            repo: Repo) {
+        SRepoRouter.pushMainController(withNavigationController: nvc, repo: repo)
     }
 }

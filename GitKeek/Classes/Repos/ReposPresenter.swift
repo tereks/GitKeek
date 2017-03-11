@@ -14,8 +14,14 @@ final class ReposPresenter {
     var interactor: ReposInteractor!
     var router: ReposRouter!
     
-    func setup() {
+    var repos: [Repo]! {
+        didSet {
+            self.view.reloadRepos()
+        }
+    }
     
+    func setup() {
+        self.view.setViewTitle(R.L10.repos)
     }
     
     func update() {
@@ -25,10 +31,26 @@ final class ReposPresenter {
     }
     
     func reload() {
+        self.view.showHUD()
+        
         self.interactor.loadRepositories()
+        .then { repos -> Void in
+            self.view.hideHUD()
+            self.repos = repos
+        }
         .catch { error in
             self.view.hideHUD()
             self.view.showAlert(withTitle: S.error, message: error.localizedDescription)
         }
+    }
+    
+    func openSingleRepo(indexPath: IndexPath) {
+        guard let nvc = (self.view as! UIViewController).navigationController else {
+            return
+        }
+        
+        let repo = self.repos[indexPath.row]
+        
+        self.router.openRepoController(withNavigationController: nvc, repo: repo)
     }
 }
