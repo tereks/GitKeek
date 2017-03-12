@@ -21,10 +21,17 @@ final class AuthRouter: NSObject {
         }
         
         let presenter = AuthPresenter()
+        let router = AuthRouter()
         
         presenter.view = controller
+        presenter.router = router
+        
         controller.presenter = presenter
         
         return navController
+    }
+    
+    func pushMainController(withNavigationController nvc: UINavigationController) {
+        MainRouter.pushMainController(withNavigationController: nvc)
     }
 }

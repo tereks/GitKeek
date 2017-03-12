@@ -11,6 +11,7 @@ import UIKit
 final class AuthPresenter {
 
     weak var view: AuthInterface!
+    var router: AuthRouter!
     
     func setup() {
         self.view.setAttributedMessage(AuthTextDataSource.title)
@@ -52,7 +53,7 @@ final class AuthPresenter {
             
             if let controller = self.view as? UIViewController,
                 let navControler = controller.navigationController {
-                MainRouter.pushMainController(withNavigationController: navControler)
+                self.router.pushMainController(withNavigationController: navControler)
             }
         }
         .catch { error in
