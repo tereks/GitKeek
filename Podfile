@@ -4,15 +4,15 @@ use_frameworks!
 abstract_target 'Abstract' do
  
   pod 'SwiftRichString'
-  pod 'Moya'
+  pod 'Moya', '~> 8.0'
   pod 'PromiseKit', '~> 4.0'
 
-  pod 'PTPopupWebView'
+  pod 'PTPopupWebView', '~> 0.4.0'
   pod 'PKHUD', '~> 4.0'
 
-  pod 'Marshal'
-  pod 'Cartography'
-  pod 'Kingfisher'
+  pod 'Marshal', '~> 1.0'
+  pod 'Cartography', '~> 1.0'
+  pod 'Kingfisher', '~> 3.0'
 
 target 'GitKeek'
 

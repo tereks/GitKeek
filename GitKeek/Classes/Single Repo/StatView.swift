@@ -62,41 +62,26 @@ final class StatView: UIView {
     }
     
     private func setup() {
-        self.forksTitle.sizeToFit()
         self.addSubview(self.forksTitle)
         self.addSubview(self.watchersTitle)
         self.addSubview(self.forksValue)
         self.addSubview(self.watchersValue)
     }
     
-    override func updateConstraints() {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.forksTitle.sizeToFit()
+        
         let titleHeight = self.forksTitle.frame.height
+        let titleWidth = self.frame.width / 2.0
         
-        constrain(self, self.forksTitle, self.watchersTitle, self.forksValue, self.watchersValue) {
-            superview, forksTitle, watchersTitle, forksValue, watchersValue in
-                        
-            forksTitle.top == superview.top
-            forksTitle.left == superview.left
-            forksTitle.right == watchersTitle.left
-            forksTitle.height == titleHeight
-            
-            watchersTitle.top == superview.top
-            watchersTitle.right == superview.right
-            watchersTitle.left == forksTitle.right
-            watchersTitle.width == forksTitle.width
-            watchersTitle.height == titleHeight
-            
-            forksValue.top == forksTitle.bottom
-            forksValue.bottom == superview.bottom
-            forksValue.left == superview.left
-            forksValue.right == watchersValue.left
-            
-            watchersValue.top == forksTitle.bottom
-            watchersValue.bottom == superview.bottom
-            watchersValue.right == superview.right
-            watchersValue.width == forksValue.width
-        }
+        self.forksTitle.frame = CGRect(x: 0, y: 0, width: titleWidth, height: titleHeight)
+        self.watchersTitle.frame = CGRect(x: self.forksTitle.frame.maxX, y: 0, width: titleWidth, height: titleHeight)
         
-        super.updateConstraints()
+        let valueHeight = self.frame.height - titleHeight
+        
+        self.forksValue.frame = CGRect(x: 0, y: self.forksTitle.frame.maxY, width: titleWidth, height: valueHeight)
+        self.watchersValue.frame = CGRect(x: self.forksTitle.frame.maxX, y: self.forksTitle.frame.maxY, width: titleWidth, height: valueHeight)
     }
 }
