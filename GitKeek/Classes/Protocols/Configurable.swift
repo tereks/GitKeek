@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Configurable: class {
+protocol Configurable: CollectionCell {
     associatedtype DataType: Any
     func config(withData data: DataType)
 }

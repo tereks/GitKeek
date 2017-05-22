@@ -12,13 +12,11 @@ class MainTabbarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.viewControllers = controllers()
     }
     
     private func controllers() -> [UIViewController] {
-        let repos = ReposRouter.controller()
-        
+        let repos = ReposRouter.controller()        
         return [repos]
     }
 }

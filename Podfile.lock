@@ -1,28 +1,28 @@
 PODS:
   - Alamofire (4.4.0)
-  - Cartography (1.0.1)
-  - Kingfisher (3.5.2)
+  - Cartography (1.1.0)
+  - Kingfisher (3.9.1)
   - Marshal (1.2.4)
-  - Moya (8.0.2):
-    - Moya/Core (= 8.0.2)
-  - Moya/Core (8.0.2):
+  - Moya (8.0.4):
+    - Moya/Core (= 8.0.4)
+  - Moya/Core (8.0.4):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
-  - PKHUD (4.2.0)
-  - PromiseKit (4.1.7):
-    - PromiseKit/Foundation (= 4.1.7)
-    - PromiseKit/QuartzCore (= 4.1.7)
-    - PromiseKit/UIKit (= 4.1.7)
-  - PromiseKit/CorePromise (4.1.7)
-  - PromiseKit/Foundation (4.1.7):
+  - PKHUD (4.2.2)
+  - PromiseKit (4.2.0):
+    - PromiseKit/Foundation (= 4.2.0)
+    - PromiseKit/QuartzCore (= 4.2.0)
+    - PromiseKit/UIKit (= 4.2.0)
+  - PromiseKit/CorePromise (4.2.0)
+  - PromiseKit/Foundation (4.2.0):
     - PromiseKit/CorePromise
-  - PromiseKit/QuartzCore (4.1.7):
+  - PromiseKit/QuartzCore (4.2.0):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (4.1.7):
+  - PromiseKit/UIKit (4.2.0):
     - PromiseKit/CorePromise
   - PTPopupWebView (0.4.0)
-  - Result (3.2.1)
-  - SwiftRichString (0.9.5)
+  - Result (3.2.2)
+  - SwiftRichString (0.9.8)
 
 DEPENDENCIES:
   - Cartography (~> 1.0)
@@ -36,16 +36,16 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  Cartography: c1460e99395b824d9d75360b0382faeb0b33dcd7
-  Kingfisher: 9950e382c500b6834ce004c7c4131c444e90c3a1
+  Cartography: '0538ccb4044acbbda2266335fc58cb4228794d90'
+  Kingfisher: 6729a0baaa458245bfb8cd5a1296c71c10d6eb6c
   Marshal: 8e04e6624e506921db7143b0bfd83caee03f32d6
-  Moya: 47f61da5b634aa71f676431b64ee0f81e976296d
-  PKHUD: 48af884cf00c2213b0313b739d914e6cab1c0f5e
-  PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
+  Moya: a08bc060c7a44eee27447b239ed33a189b641e2b
+  PKHUD: 9a3599e04d57676ec14746c40e423a52fb6588c0
+  PromiseKit: '08dfb783c161ddcd95b7912421f14c5113fd8318'
   PTPopupWebView: 9db92ddc0629ed735dee23d4388d67b18158d55c
-  Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
-  SwiftRichString: 6dc9a413f03b1761003ff4f6802c916b19159a6b
+  Result: 4edd39003fdccf281d418ee1b006571f70123250
+  SwiftRichString: d42eeaefceea340e27b8a33945e0fac1ee21f58f
 
-PODFILE CHECKSUM: a918b6ed6b21be46068a3882e636c283a29a5f46
+PODFILE CHECKSUM: f9faaa6aabe0902a64ac1553db12cf477ebbe107
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

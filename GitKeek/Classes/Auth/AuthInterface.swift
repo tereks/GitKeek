@@ -9,7 +9,6 @@
 import UIKit
 
 protocol AuthInterface: Awaiting, Alarming {
-
     func setAttributedMessage(_ text: NSAttributedString)
     func setSignInAttributedTitle(_ text: NSAttributedString)
     func hidePopup()

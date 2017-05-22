@@ -15,8 +15,7 @@ final class ReposViewController: ConfigurableTableViewController<RepoTableCell<R
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter.setup()
-        
+        presenter.setup()        
         tableView.tableFooterView = UIView()
     }
 

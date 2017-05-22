@@ -12,20 +12,16 @@ final class AuthRouter: NSObject {
 
     class func controller() -> UINavigationController? {
         let storyboard = UIStoryboard(name: R.Storyboard.Auth, bundle: nil)
-        guard let navController = storyboard.instantiateInitialViewController() as? UINavigationController else {
+        guard let navController = storyboard.instantiateInitialViewController() as? UINavigationController,
+            let controller = navController.topViewController as? AuthViewController else {
             return nil
         }
         
-        guard let controller = navController.topViewController as? AuthViewController else {
-            return nil
-        }
+        let presenter        = AuthPresenter()
+        let router           = AuthRouter()
         
-        let presenter = AuthPresenter()
-        let router = AuthRouter()
-        
-        presenter.view = controller
-        presenter.router = router
-        
+        presenter.view       = controller
+        presenter.router     = router        
         controller.presenter = presenter
         
         return navController

@@ -74,14 +74,14 @@ final class StatView: UIView {
         self.forksTitle.sizeToFit()
         
         let titleHeight = self.forksTitle.frame.height
-        let titleWidth = self.frame.width / 2.0
+        let titleWidth  = self.frame.width / 2.0
         
-        self.forksTitle.frame = CGRect(x: 0, y: 0, width: titleWidth, height: titleHeight)
+        self.forksTitle.frame    = CGRect(x: 0, y: 0, width: titleWidth, height: titleHeight)
         self.watchersTitle.frame = CGRect(x: self.forksTitle.frame.maxX, y: 0, width: titleWidth, height: titleHeight)
         
         let valueHeight = self.frame.height - titleHeight
         
-        self.forksValue.frame = CGRect(x: 0, y: self.forksTitle.frame.maxY, width: titleWidth, height: valueHeight)
+        self.forksValue.frame    = CGRect(x: 0, y: self.forksTitle.frame.maxY, width: titleWidth, height: valueHeight)
         self.watchersValue.frame = CGRect(x: self.forksTitle.frame.maxX, y: self.forksTitle.frame.maxY, width: titleWidth, height: valueHeight)
     }
 }

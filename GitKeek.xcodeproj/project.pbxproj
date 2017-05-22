@@ -18,18 +18,12 @@
 		278DA2911E728CB400B20DE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278DA28F1E728CB400B20DE5 /* Main.storyboard */; };
 		278DA2931E728DE900B20DE5 /* AuthInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DA2921E728DE900B20DE5 /* AuthInterface.swift */; };
 		278DA2951E728DFA00B20DE5 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DA2941E728DF900B20DE5 /* AuthPresenter.swift */; };
-		278DA2971E728F5600B20DE5 /* Awaiting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DA2961E728F5600B20DE5 /* Awaiting.swift */; };
-		278DA2991E7291E700B20DE5 /* Alarming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DA2981E7291E700B20DE5 /* Alarming.swift */; };
 		278DA29C1E72929F00B20DE5 /* ReposInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DA29A1E72929F00B20DE5 /* ReposInterface.swift */; };
 		278DA29D1E72929F00B20DE5 /* ReposPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DA29B1E72929F00B20DE5 /* ReposPresenter.swift */; };
 		278DA29F1E7292FB00B20DE5 /* ReposInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DA29E1E7292FB00B20DE5 /* ReposInteractor.swift */; };
 		278DA2A21E7293CE00B20DE5 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DA2A11E7293CE00B20DE5 /* Repo.swift */; };
-		278DA2A41E729BBC00B20DE5 /* Date+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DA2A31E729BBC00B20DE5 /* Date+JSON.swift */; };
-		278DA2A61E72A28900B20DE5 /* Response+Marshal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DA2A51E72A28900B20DE5 /* Response+Marshal.swift */; };
-		278DA2A81E72A3AB00B20DE5 /* DispatchOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DA2A71E72A3AB00B20DE5 /* DispatchOnce.swift */; };
 		278DA2AA1E72A50400B20DE5 /* RepoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DA2A91E72A50400B20DE5 /* RepoTableCell.swift */; };
 		BE21F0B61E6D74DE005CE72B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0B51E6D74DE005CE72B /* Resource.swift */; };
-		BE21F0B81E6D7522005CE72B /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0B71E6D7522005CE72B /* Defaults.swift */; };
 		BE21F0BA1E6D7767005CE72B /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0B91E6D7767005CE72B /* Strings.swift */; };
 		BE21F0BE1E6D78D7005CE72B /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0BD1E6D78D7005CE72B /* AuthViewController.swift */; };
 		BE21F0C01E6D78E6005CE72B /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0BF1E6D78E6005CE72B /* AuthRouter.swift */; };
@@ -48,13 +42,8 @@
 		BE21F0DE1E6D7DC1005CE72B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0D21E6D7DC1005CE72B /* Roboto-Regular.ttf */; };
 		BE21F0DF1E6D7DC1005CE72B /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0D31E6D7DC1005CE72B /* Roboto-Thin.ttf */; };
 		BE21F0E01E6D7DC1005CE72B /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0D41E6D7DC1005CE72B /* Roboto-ThinItalic.ttf */; };
-		BE21F0E51E6DA771005CE72B /* URL+Param.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0E41E6DA771005CE72B /* URL+Param.swift */; };
-		BE21F0E71E6DB263005CE72B /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0E61E6DB263005CE72B /* NotificationCenter.swift */; };
 		BE21F0F01E7066E0005CE72B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0EF1E7066DF005CE72B /* Credentials.swift */; };
-		BEB5F9631E73908A00248B80 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB5F9621E73908A00248B80 /* Reusable.swift */; };
-		BEB5F9651E73917E00248B80 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB5F9641E73917E00248B80 /* UITableView+Reusable.swift */; };
 		BEB5F9671E73933000248B80 /* ConfigurableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB5F9661E73933000248B80 /* ConfigurableTableView.swift */; };
-		BEB5F9691E73935600248B80 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB5F9681E73935600248B80 /* Configurable.swift */; };
 		BEB90C3C1E73FE8900505F87 /* SRepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB90C371E73FE8900505F87 /* SRepoViewController.swift */; };
 		BEB90C3D1E73FE8900505F87 /* SRepoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB90C381E73FE8900505F87 /* SRepoRouter.swift */; };
 		BEB90C3E1E73FE8900505F87 /* SRepoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB90C391E73FE8900505F87 /* SRepoPresenter.swift */; };
@@ -63,6 +52,18 @@
 		BEB90C421E74042400505F87 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB90C411E74042400505F87 /* Owner.swift */; };
 		BEB90C441E7417AD00505F87 /* SRepoFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB90C431E7417AD00505F87 /* SRepoFormatter.swift */; };
 		BEB90C461E7418E500505F87 /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB90C451E7418E500505F87 /* StatView.swift */; };
+		BEB9E8A11ED275190057329D /* Alarming.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9E89E1ED275190057329D /* Alarming.swift */; };
+		BEB9E8A21ED275190057329D /* Awaiting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9E89F1ED275190057329D /* Awaiting.swift */; };
+		BEB9E8A31ED275190057329D /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9E8A01ED275190057329D /* Reusable.swift */; };
+		BEB9E8A51ED275320057329D /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9E8A41ED275320057329D /* Configurable.swift */; };
+		BEB9E8AC1ED275460057329D /* Date+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9E8A71ED275460057329D /* Date+JSON.swift */; };
+		BEB9E8AD1ED275460057329D /* DispatchOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9E8A81ED275460057329D /* DispatchOnce.swift */; };
+		BEB9E8AE1ED275460057329D /* Response+Marshal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9E8A91ED275460057329D /* Response+Marshal.swift */; };
+		BEB9E8AF1ED275460057329D /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9E8AA1ED275460057329D /* UITableView+Reusable.swift */; };
+		BEB9E8B01ED275460057329D /* URL+Param.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9E8AB1ED275460057329D /* URL+Param.swift */; };
+		BEB9E8B21ED2755F0057329D /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9E8B11ED2755F0057329D /* NotificationCenter.swift */; };
+		BEB9E8B41ED276270057329D /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9E8B31ED276270057329D /* CollectionExtension.swift */; };
+		BEB9E8B61ED276550057329D /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9E8B51ED276550057329D /* CollectionCell.swift */; };
 		F8459E2046B438A5B40664DA /* Pods_Abstract_GitKeek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027DF5E40822C3AA90965E64 /* Pods_Abstract_GitKeek.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,19 +82,13 @@
 		278DA2901E728CB400B20DE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		278DA2921E728DE900B20DE5 /* AuthInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthInterface.swift; sourceTree = "<group>"; };
 		278DA2941E728DF900B20DE5 /* AuthPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
-		278DA2961E728F5600B20DE5 /* Awaiting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Awaiting.swift; sourceTree = "<group>"; };
-		278DA2981E7291E700B20DE5 /* Alarming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarming.swift; sourceTree = "<group>"; };
 		278DA29A1E72929F00B20DE5 /* ReposInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposInterface.swift; sourceTree = "<group>"; };
 		278DA29B1E72929F00B20DE5 /* ReposPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposPresenter.swift; sourceTree = "<group>"; };
 		278DA29E1E7292FB00B20DE5 /* ReposInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposInteractor.swift; sourceTree = "<group>"; };
 		278DA2A11E7293CE00B20DE5 /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
-		278DA2A31E729BBC00B20DE5 /* Date+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+JSON.swift"; sourceTree = "<group>"; };
-		278DA2A51E72A28900B20DE5 /* Response+Marshal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+Marshal.swift"; sourceTree = "<group>"; };
-		278DA2A71E72A3AB00B20DE5 /* DispatchOnce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchOnce.swift; sourceTree = "<group>"; };
 		278DA2A91E72A50400B20DE5 /* RepoTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoTableCell.swift; sourceTree = "<group>"; };
 		83716E37E8627E45E4C989B0 /* Pods-Abstract-GitKeek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract-GitKeek.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract-GitKeek/Pods-Abstract-GitKeek.debug.xcconfig"; sourceTree = "<group>"; };
 		BE21F0B51E6D74DE005CE72B /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		BE21F0B71E6D7522005CE72B /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		BE21F0B91E6D7767005CE72B /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		BE21F0BD1E6D78D7005CE72B /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		BE21F0BF1E6D78E6005CE72B /* AuthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
@@ -112,13 +107,8 @@
 		BE21F0D21E6D7DC1005CE72B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		BE21F0D31E6D7DC1005CE72B /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		BE21F0D41E6D7DC1005CE72B /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
-		BE21F0E41E6DA771005CE72B /* URL+Param.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Param.swift"; sourceTree = "<group>"; };
-		BE21F0E61E6DB263005CE72B /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
 		BE21F0EF1E7066DF005CE72B /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		BEB5F9621E73908A00248B80 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
-		BEB5F9641E73917E00248B80 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		BEB5F9661E73933000248B80 /* ConfigurableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableTableView.swift; sourceTree = "<group>"; };
-		BEB5F9681E73935600248B80 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		BEB90C371E73FE8900505F87 /* SRepoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRepoViewController.swift; sourceTree = "<group>"; };
 		BEB90C381E73FE8900505F87 /* SRepoRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRepoRouter.swift; sourceTree = "<group>"; };
 		BEB90C391E73FE8900505F87 /* SRepoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRepoPresenter.swift; sourceTree = "<group>"; };
@@ -127,6 +117,18 @@
 		BEB90C411E74042400505F87 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		BEB90C431E7417AD00505F87 /* SRepoFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRepoFormatter.swift; sourceTree = "<group>"; };
 		BEB90C451E7418E500505F87 /* StatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
+		BEB9E89E1ED275190057329D /* Alarming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarming.swift; sourceTree = "<group>"; };
+		BEB9E89F1ED275190057329D /* Awaiting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Awaiting.swift; sourceTree = "<group>"; };
+		BEB9E8A01ED275190057329D /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		BEB9E8A41ED275320057329D /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		BEB9E8A71ED275460057329D /* Date+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+JSON.swift"; sourceTree = "<group>"; };
+		BEB9E8A81ED275460057329D /* DispatchOnce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchOnce.swift; sourceTree = "<group>"; };
+		BEB9E8A91ED275460057329D /* Response+Marshal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+Marshal.swift"; sourceTree = "<group>"; };
+		BEB9E8AA1ED275460057329D /* UITableView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		BEB9E8AB1ED275460057329D /* URL+Param.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Param.swift"; sourceTree = "<group>"; };
+		BEB9E8B11ED2755F0057329D /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
+		BEB9E8B31ED276270057329D /* CollectionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
+		BEB9E8B51ED276550057329D /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		CDBBF29151E61A96FC52568A /* Pods-Abstract-GitKeek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract-GitKeek.release.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract-GitKeek/Pods-Abstract-GitKeek.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,7 +222,6 @@
 			children = (
 				BE21F0B51E6D74DE005CE72B /* Resource.swift */,
 				BE21F0B91E6D7767005CE72B /* Strings.swift */,
-				BE21F0B71E6D7522005CE72B /* Defaults.swift */,
 				BE21F0C81E6D7DC1005CE72B /* Fonts */,
 			);
 			path = Resources;
@@ -230,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				BE21F0C31E6D7B83005CE72B /* Common */,
+				BEB9E8A61ED275460057329D /* Extensions */,
+				BEB9E89D1ED275190057329D /* Protocols */,
 				BE21F0BC1E6D78CD005CE72B /* Auth */,
 				278DA26A1E71508600B20DE5 /* Main */,
 				278DA28A1E728B8200B20DE5 /* Repos */,
@@ -256,17 +259,7 @@
 			children = (
 				BE21F0EF1E7066DF005CE72B /* Credentials.swift */,
 				BE21F0C41E6D7B99005CE72B /* GithubService.swift */,
-				BE21F0E41E6DA771005CE72B /* URL+Param.swift */,
-				BE21F0E61E6DB263005CE72B /* NotificationCenter.swift */,
-				278DA2961E728F5600B20DE5 /* Awaiting.swift */,
-				278DA2981E7291E700B20DE5 /* Alarming.swift */,
-				BEB5F9621E73908A00248B80 /* Reusable.swift */,
-				BEB5F9681E73935600248B80 /* Configurable.swift */,
-				BEB5F9641E73917E00248B80 /* UITableView+Reusable.swift */,
 				BEB5F9661E73933000248B80 /* ConfigurableTableView.swift */,
-				278DA2A31E729BBC00B20DE5 /* Date+JSON.swift */,
-				278DA2A51E72A28900B20DE5 /* Response+Marshal.swift */,
-				278DA2A71E72A3AB00B20DE5 /* DispatchOnce.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -302,6 +295,32 @@
 				BEB90C431E7417AD00505F87 /* SRepoFormatter.swift */,
 			);
 			path = "Single Repo";
+			sourceTree = "<group>";
+		};
+		BEB9E89D1ED275190057329D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BEB9E8A41ED275320057329D /* Configurable.swift */,
+				BEB9E89E1ED275190057329D /* Alarming.swift */,
+				BEB9E89F1ED275190057329D /* Awaiting.swift */,
+				BEB9E8A01ED275190057329D /* Reusable.swift */,
+				BEB9E8B51ED276550057329D /* CollectionCell.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BEB9E8A61ED275460057329D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BEB9E8A71ED275460057329D /* Date+JSON.swift */,
+				BEB9E8A81ED275460057329D /* DispatchOnce.swift */,
+				BEB9E8B11ED2755F0057329D /* NotificationCenter.swift */,
+				BEB9E8A91ED275460057329D /* Response+Marshal.swift */,
+				BEB9E8AA1ED275460057329D /* UITableView+Reusable.swift */,
+				BEB9E8AB1ED275460057329D /* URL+Param.swift */,
+				BEB9E8B31ED276270057329D /* CollectionExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C8BBD4E129FC1B7BB9CE7FFC /* Pods */ = {
@@ -439,7 +458,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -449,32 +468,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				278DA2991E7291E700B20DE5 /* Alarming.swift in Sources */,
+				BEB9E8A51ED275320057329D /* Configurable.swift in Sources */,
+				BEB9E8AC1ED275460057329D /* Date+JSON.swift in Sources */,
 				278DA29C1E72929F00B20DE5 /* ReposInterface.swift in Sources */,
-				278DA2A81E72A3AB00B20DE5 /* DispatchOnce.swift in Sources */,
 				BEB90C441E7417AD00505F87 /* SRepoFormatter.swift in Sources */,
 				BEB90C401E73FE8900505F87 /* SRepoInteractor.swift in Sources */,
+				BEB9E8A21ED275190057329D /* Awaiting.swift in Sources */,
 				276C3BFA1E6D670B00814B2E /* StartupService.swift in Sources */,
 				278DA2A21E7293CE00B20DE5 /* Repo.swift in Sources */,
 				278DA26E1E71518E00B20DE5 /* MainRouter.swift in Sources */,
-				278DA2A61E72A28900B20DE5 /* Response+Marshal.swift in Sources */,
-				BE21F0E51E6DA771005CE72B /* URL+Param.swift in Sources */,
 				BEB5F9671E73933000248B80 /* ConfigurableTableView.swift in Sources */,
+				BEB9E8AF1ED275460057329D /* UITableView+Reusable.swift in Sources */,
+				BEB9E8B61ED276550057329D /* CollectionCell.swift in Sources */,
 				BE21F0C71E6D7D8C005CE72B /* AuthTextDataSource.swift in Sources */,
 				278DA2951E728DFA00B20DE5 /* AuthPresenter.swift in Sources */,
-				BEB5F9651E73917E00248B80 /* UITableView+Reusable.swift in Sources */,
 				BE21F0B61E6D74DE005CE72B /* Resource.swift in Sources */,
 				BE21F0F01E7066E0005CE72B /* Credentials.swift in Sources */,
 				278DA28E1E728B9300B20DE5 /* ReposRouter.swift in Sources */,
 				278DA2931E728DE900B20DE5 /* AuthInterface.swift in Sources */,
-				BE21F0B81E6D7522005CE72B /* Defaults.swift in Sources */,
+				BEB9E8AD1ED275460057329D /* DispatchOnce.swift in Sources */,
+				BEB9E8B41ED276270057329D /* CollectionExtension.swift in Sources */,
+				BEB9E8A31ED275190057329D /* Reusable.swift in Sources */,
+				BEB9E8B01ED275460057329D /* URL+Param.swift in Sources */,
 				BEB90C3E1E73FE8900505F87 /* SRepoPresenter.swift in Sources */,
 				BEB90C421E74042400505F87 /* Owner.swift in Sources */,
 				BE21F0BE1E6D78D7005CE72B /* AuthViewController.swift in Sources */,
+				BEB9E8A11ED275190057329D /* Alarming.swift in Sources */,
+				BEB9E8B21ED2755F0057329D /* NotificationCenter.swift in Sources */,
 				278DA2AA1E72A50400B20DE5 /* RepoTableCell.swift in Sources */,
 				BE21F0BA1E6D7767005CE72B /* Strings.swift in Sources */,
 				BEB90C3F1E73FE8900505F87 /* SRepoInterface.swift in Sources */,
-				BE21F0E71E6DB263005CE72B /* NotificationCenter.swift in Sources */,
+				BEB9E8AE1ED275460057329D /* Response+Marshal.swift in Sources */,
 				BE21F0C51E6D7B99005CE72B /* GithubService.swift in Sources */,
 				BEB90C3D1E73FE8900505F87 /* SRepoRouter.swift in Sources */,
 				278DA29D1E72929F00B20DE5 /* ReposPresenter.swift in Sources */,
@@ -482,12 +506,8 @@
 				278DA28C1E728B8200B20DE5 /* ReposViewController.swift in Sources */,
 				278DA29F1E7292FB00B20DE5 /* ReposInteractor.swift in Sources */,
 				BEB90C461E7418E500505F87 /* StatView.swift in Sources */,
-				278DA2971E728F5600B20DE5 /* Awaiting.swift in Sources */,
-				278DA2A41E729BBC00B20DE5 /* Date+JSON.swift in Sources */,
-				BEB5F9631E73908A00248B80 /* Reusable.swift in Sources */,
 				278DA2891E728B0600B20DE5 /* MainTabbarController.swift in Sources */,
 				BEB90C3C1E73FE8900505F87 /* SRepoViewController.swift in Sources */,
-				BEB5F9691E73935600248B80 /* Configurable.swift in Sources */,
 				276C3BE81E6D661000814B2E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

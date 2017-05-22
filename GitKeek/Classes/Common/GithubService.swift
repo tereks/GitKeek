@@ -92,8 +92,7 @@ final class GithubService {
     
     static let shared = GithubService()
     
-    private init() {
-    }
+    private init() {}
     
     var authPlugin: AccessTokenPlugin!
     var provider: MoyaProvider<Github>!

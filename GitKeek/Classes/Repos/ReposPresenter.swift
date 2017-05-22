@@ -49,8 +49,7 @@ final class ReposPresenter {
             return
         }
         
-        let repo = self.repos[indexPath.row]
-        
+        let repo = self.repos[indexPath.row]        
         self.router.openRepoController(withNavigationController: nvc, repo: repo)
     }
 }

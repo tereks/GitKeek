@@ -36,8 +36,7 @@ final class AuthPresenter {
                 return
         }
         
-        self.view.showHUD()
-        
+        self.view.showHUD()        
         let credentials = Credentials(clientId: R.Credentials.clientId,
                                       clientSecret: R.Credentials.clientSecret,
                                       code: code)

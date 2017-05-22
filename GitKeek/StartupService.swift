@@ -8,11 +8,11 @@
 
 import UIKit
 
-struct StartupService {
+final class StartupService {
     
     weak var window: UIWindow?
     
-    init(withWindow window: UIWindow?) {        
+    init(with window: UIWindow?) {        
         self.window = window        
         setup()
     }
@@ -22,10 +22,10 @@ struct StartupService {
         
         if R.Credentials.accessToken.isEmpty {
             self.window?.rootViewController = AuthRouter.controller()
-            return 
         }
-        
-        self.window?.rootViewController = MainRouter.mainTabController()
-        self.window?.backgroundColor = .white
+        else {
+            self.window?.rootViewController = MainRouter.mainTabController()
+            self.window?.backgroundColor = .white
+        }
     }
 }

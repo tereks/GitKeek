@@ -25,8 +25,7 @@ final class RepoTableCell<DataType>: UITableViewCell, Configurable where DataTyp
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        self.accessoryType = .disclosureIndicator
-        
+        self.accessoryType = .disclosureIndicator        
         self.contentView.addSubview(self.titleLabel)
         self.contentView.addSubview(self.detailsLabel)
     }
