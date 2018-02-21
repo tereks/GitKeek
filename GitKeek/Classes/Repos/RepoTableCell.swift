@@ -9,16 +9,16 @@
 import UIKit
 
 final class RepoTableCell<DataType>: UITableViewCell, Configurable where DataType: RepoPresentable {
- 
-    var titleLabel: UILabel = {
+
+    private var titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
         return label
     }()
     
-    var detailsLabel: UILabel = {
+    private var detailsLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 13, weight: UIFontWeightLight)
+        label.font = UIFont.systemFont(ofSize: 13, weight: .light)
         return label
     }()
     
@@ -34,6 +34,13 @@ final class RepoTableCell<DataType>: UITableViewCell, Configurable where DataTyp
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        titleLabel.text = ""
+        detailsLabel.text = ""
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -46,7 +53,7 @@ final class RepoTableCell<DataType>: UITableViewCell, Configurable where DataTyp
                                          width: rightMargin, height: self.contentView.frame.height / 2.0)
     }
     
-    func config(withData data: DataType) {
+    func configure(with data: DataType) {
         self.titleLabel.text = data.name
         self.detailsLabel.text = data.language
     }

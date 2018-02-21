@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import PromiseKit
+import Promises
 
 final class ReposInteractor {
     

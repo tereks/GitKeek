@@ -50,5 +50,6 @@ struct R {
         static let repos = "Repositories"
         static let forks = "Forks"
         static let watchers = "Watchers"
+        static let contributors = "Contributors"
     }
 }

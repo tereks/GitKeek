@@ -13,8 +13,7 @@ final class StartupService {
     weak var window: UIWindow?
     
     init(with window: UIWindow?) {        
-        self.window = window        
-        setup()
+        self.window = window
     }
     
     func setup() {

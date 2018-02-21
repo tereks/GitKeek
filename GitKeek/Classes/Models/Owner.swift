@@ -1,5 +1,5 @@
 //
-//  Owner.swift
+//  User.swift
 //  GitKeek
 //
 //  Created by Sergey Kim on 11.03.17.
@@ -9,14 +9,14 @@
 import UIKit
 import Marshal
 
-protocol OwnerPresentable {
+protocol UserPresentable {
     var id: Int { set get }
     var login: String { set get }
     var avatarUrl: String { set get }
     var type: String { set get }
 }
 
-struct Owner: Unmarshaling, OwnerPresentable {
+struct User: Unmarshaling, UserPresentable {
     var id: Int
     var login: String
     var avatarUrl: String

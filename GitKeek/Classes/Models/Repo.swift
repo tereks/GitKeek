@@ -20,7 +20,7 @@ protocol RepoPresentable {
     var stargazersCount: Int { set get }
     var watchersCount: Int { set get }
     
-    var owner: Owner { set get }
+    var owner: User { set get }
 }
 
 struct Repo: Unmarshaling, RepoPresentable {
@@ -34,7 +34,7 @@ struct Repo: Unmarshaling, RepoPresentable {
     var watchersCount: Int
     
     var desc: String?
-    var owner: Owner
+    var owner: User
     
     init(object: MarshaledObject) throws {
         id = try object.value(for: "id")

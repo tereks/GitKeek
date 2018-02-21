@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Promises
 
 final class AuthPresenter {
 
@@ -27,8 +28,15 @@ final class AuthPresenter {
                                                object: nil)
     }
     
-    dynamic func applicationOpenedViaScheme(notification: Notification) {
-        self.view.hidePopup()
+    func onAuthButtonAction() {
+        let oauthAddress = GithubService.shared.authorizeAddress(withClientId: R.Credentials.clientId)
+        if let url = URL(string: oauthAddress) {
+            self.view.openBrowser(url: url)
+        }
+    }
+    
+    @objc func applicationOpenedViaScheme(notification: Notification) {
+        self.view.hideBrowser()
         
         guard let userInfo = notification.userInfo,
             let url = userInfo[S.url] as? URL,
@@ -36,20 +44,18 @@ final class AuthPresenter {
                 return
         }
         
-        self.view.showHUD()        
         let credentials = Credentials(clientId: R.Credentials.clientId,
                                       clientSecret: R.Credentials.clientSecret,
                                       code: code)
         GithubService.shared.getAccessToken(credentials: credentials)
-        .then { accessToken -> Void in
+        .then { accessToken in
             self.view.hideHUD()
-            
-            guard accessToken.characters.count > 0 else {
+            guard !accessToken.isEmpty else {
                 return
             }
             R.Credentials.accessToken = accessToken
             GithubService.shared.configure()
-            
+
             if let controller = self.view as? UIViewController,
                 let navControler = controller.navigationController {
                 self.router.pushMainController(withNavigationController: navControler)

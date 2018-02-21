@@ -23,12 +23,20 @@
 		278DA29F1E7292FB00B20DE5 /* ReposInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DA29E1E7292FB00B20DE5 /* ReposInteractor.swift */; };
 		278DA2A21E7293CE00B20DE5 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DA2A11E7293CE00B20DE5 /* Repo.swift */; };
 		278DA2AA1E72A50400B20DE5 /* RepoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DA2A91E72A50400B20DE5 /* RepoTableCell.swift */; };
+		6B294265203D32A400EA4724 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6B294264203D32A400EA4724 /* Podfile */; };
+		6B29426B203D4E2800EA4724 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294269203D4E2800EA4724 /* GithubService.swift */; };
+		6B29426C203D4E2800EA4724 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B29426A203D4E2800EA4724 /* Credentials.swift */; };
+		6B294274203D527A00EA4724 /* ContributorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B29426E203D527900EA4724 /* ContributorsViewController.swift */; };
+		6B294275203D527A00EA4724 /* ContributorsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B29426F203D527900EA4724 /* ContributorsRouter.swift */; };
+		6B294276203D527A00EA4724 /* ContributorsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294270203D527900EA4724 /* ContributorsPresenter.swift */; };
+		6B294277203D527A00EA4724 /* ContributorsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294271203D527900EA4724 /* ContributorsInterface.swift */; };
+		6B294278203D527A00EA4724 /* ContributorsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294272203D527900EA4724 /* ContributorsInteractor.swift */; };
+		6B294279203D527A00EA4724 /* ContributorsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294273203D527900EA4724 /* ContributorsTableCell.swift */; };
 		BE21F0B61E6D74DE005CE72B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0B51E6D74DE005CE72B /* Resource.swift */; };
 		BE21F0BA1E6D7767005CE72B /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0B91E6D7767005CE72B /* Strings.swift */; };
 		BE21F0BE1E6D78D7005CE72B /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0BD1E6D78D7005CE72B /* AuthViewController.swift */; };
 		BE21F0C01E6D78E6005CE72B /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0BF1E6D78E6005CE72B /* AuthRouter.swift */; };
 		BE21F0C21E6D7932005CE72B /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0C11E6D7932005CE72B /* Auth.storyboard */; };
-		BE21F0C51E6D7B99005CE72B /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0C41E6D7B99005CE72B /* GithubService.swift */; };
 		BE21F0C71E6D7D8C005CE72B /* AuthTextDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0C61E6D7D8C005CE72B /* AuthTextDataSource.swift */; };
 		BE21F0D51E6D7DC1005CE72B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0C91E6D7DC1005CE72B /* Roboto-Black.ttf */; };
 		BE21F0D61E6D7DC1005CE72B /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0CA1E6D7DC1005CE72B /* Roboto-BlackItalic.ttf */; };
@@ -42,7 +50,6 @@
 		BE21F0DE1E6D7DC1005CE72B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0D21E6D7DC1005CE72B /* Roboto-Regular.ttf */; };
 		BE21F0DF1E6D7DC1005CE72B /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0D31E6D7DC1005CE72B /* Roboto-Thin.ttf */; };
 		BE21F0E01E6D7DC1005CE72B /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE21F0D41E6D7DC1005CE72B /* Roboto-ThinItalic.ttf */; };
-		BE21F0F01E7066E0005CE72B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0EF1E7066DF005CE72B /* Credentials.swift */; };
 		BEB5F9671E73933000248B80 /* ConfigurableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB5F9661E73933000248B80 /* ConfigurableTableView.swift */; };
 		BEB90C3C1E73FE8900505F87 /* SRepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB90C371E73FE8900505F87 /* SRepoViewController.swift */; };
 		BEB90C3D1E73FE8900505F87 /* SRepoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB90C381E73FE8900505F87 /* SRepoRouter.swift */; };
@@ -87,13 +94,21 @@
 		278DA29E1E7292FB00B20DE5 /* ReposInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposInteractor.swift; sourceTree = "<group>"; };
 		278DA2A11E7293CE00B20DE5 /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		278DA2A91E72A50400B20DE5 /* RepoTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoTableCell.swift; sourceTree = "<group>"; };
+		6B294264203D32A400EA4724 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6B294269203D4E2800EA4724 /* GithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
+		6B29426A203D4E2800EA4724 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		6B29426E203D527900EA4724 /* ContributorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorsViewController.swift; sourceTree = "<group>"; };
+		6B29426F203D527900EA4724 /* ContributorsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorsRouter.swift; sourceTree = "<group>"; };
+		6B294270203D527900EA4724 /* ContributorsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorsPresenter.swift; sourceTree = "<group>"; };
+		6B294271203D527900EA4724 /* ContributorsInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorsInterface.swift; sourceTree = "<group>"; };
+		6B294272203D527900EA4724 /* ContributorsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorsInteractor.swift; sourceTree = "<group>"; };
+		6B294273203D527900EA4724 /* ContributorsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorsTableCell.swift; sourceTree = "<group>"; };
 		83716E37E8627E45E4C989B0 /* Pods-Abstract-GitKeek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract-GitKeek.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract-GitKeek/Pods-Abstract-GitKeek.debug.xcconfig"; sourceTree = "<group>"; };
 		BE21F0B51E6D74DE005CE72B /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		BE21F0B91E6D7767005CE72B /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		BE21F0BD1E6D78D7005CE72B /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		BE21F0BF1E6D78E6005CE72B /* AuthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
 		BE21F0C11E6D7932005CE72B /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
-		BE21F0C41E6D7B99005CE72B /* GithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
 		BE21F0C61E6D7D8C005CE72B /* AuthTextDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthTextDataSource.swift; sourceTree = "<group>"; };
 		BE21F0C91E6D7DC1005CE72B /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		BE21F0CA1E6D7DC1005CE72B /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -107,7 +122,6 @@
 		BE21F0D21E6D7DC1005CE72B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		BE21F0D31E6D7DC1005CE72B /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		BE21F0D41E6D7DC1005CE72B /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
-		BE21F0EF1E7066DF005CE72B /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		BEB5F9661E73933000248B80 /* ConfigurableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableTableView.swift; sourceTree = "<group>"; };
 		BEB90C371E73FE8900505F87 /* SRepoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRepoViewController.swift; sourceTree = "<group>"; };
 		BEB90C381E73FE8900505F87 /* SRepoRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRepoRouter.swift; sourceTree = "<group>"; };
@@ -147,6 +161,7 @@
 		276C3BDB1E6D661000814B2E = {
 			isa = PBXGroup;
 			children = (
+				6B294264203D32A400EA4724 /* Podfile */,
 				276C3BE61E6D661000814B2E /* GitKeek */,
 				276C3BE51E6D661000814B2E /* Products */,
 				C8BBD4E129FC1B7BB9CE7FFC /* Pods */,
@@ -217,6 +232,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6B294268203D4E2800EA4724 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6B294269203D4E2800EA4724 /* GithubService.swift */,
+				6B29426A203D4E2800EA4724 /* Credentials.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		6B29426D203D527900EA4724 /* Contributors */ = {
+			isa = PBXGroup;
+			children = (
+				6B29426E203D527900EA4724 /* ContributorsViewController.swift */,
+				6B294271203D527900EA4724 /* ContributorsInterface.swift */,
+				6B294270203D527900EA4724 /* ContributorsPresenter.swift */,
+				6B294272203D527900EA4724 /* ContributorsInteractor.swift */,
+				6B29426F203D527900EA4724 /* ContributorsRouter.swift */,
+				6B294273203D527900EA4724 /* ContributorsTableCell.swift */,
+			);
+			path = Contributors;
+			sourceTree = "<group>";
+		};
 		BE21F0B41E6D74CC005CE72B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +267,7 @@
 		BE21F0BB1E6D78CD005CE72B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6B294268203D4E2800EA4724 /* API */,
 				BE21F0C31E6D7B83005CE72B /* Common */,
 				BEB9E8A61ED275460057329D /* Extensions */,
 				BEB9E89D1ED275190057329D /* Protocols */,
@@ -237,6 +275,7 @@
 				278DA26A1E71508600B20DE5 /* Main */,
 				278DA28A1E728B8200B20DE5 /* Repos */,
 				BEB90C361E73FE5700505F87 /* Single Repo */,
+				6B29426D203D527900EA4724 /* Contributors */,
 				278DA2A01E7293C400B20DE5 /* Models */,
 			);
 			path = Classes;
@@ -257,8 +296,6 @@
 		BE21F0C31E6D7B83005CE72B /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				BE21F0EF1E7066DF005CE72B /* Credentials.swift */,
-				BE21F0C41E6D7B99005CE72B /* GithubService.swift */,
 				BEB5F9661E73933000248B80 /* ConfigurableTableView.swift */,
 			);
 			path = Common;
@@ -362,7 +399,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Sergey Kim";
 				TargetAttributes = {
 					276C3BE31E6D661000814B2E = {
@@ -394,6 +431,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B294265203D32A400EA4724 /* Podfile in Resources */,
 				BE21F0D71E6D7DC1005CE72B /* Roboto-Bold.ttf in Resources */,
 				BE21F0DB1E6D7DC1005CE72B /* Roboto-LightItalic.ttf in Resources */,
 				BE21F0DD1E6D7DC1005CE72B /* Roboto-MediumItalic.ttf in Resources */,
@@ -422,9 +460,30 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Abstract-GitKeek/Pods-Abstract-GitKeek-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Marshal/Marshal.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesSwift/Promises.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftRichString/SwiftRichString.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Marshal.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Promises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRichString.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -452,13 +511,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Abstract-GitKeek-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -473,6 +535,7 @@
 				278DA29C1E72929F00B20DE5 /* ReposInterface.swift in Sources */,
 				BEB90C441E7417AD00505F87 /* SRepoFormatter.swift in Sources */,
 				BEB90C401E73FE8900505F87 /* SRepoInteractor.swift in Sources */,
+				6B29426B203D4E2800EA4724 /* GithubService.swift in Sources */,
 				BEB9E8A21ED275190057329D /* Awaiting.swift in Sources */,
 				276C3BFA1E6D670B00814B2E /* StartupService.swift in Sources */,
 				278DA2A21E7293CE00B20DE5 /* Repo.swift in Sources */,
@@ -480,32 +543,37 @@
 				BEB5F9671E73933000248B80 /* ConfigurableTableView.swift in Sources */,
 				BEB9E8AF1ED275460057329D /* UITableView+Reusable.swift in Sources */,
 				BEB9E8B61ED276550057329D /* CollectionCell.swift in Sources */,
+				6B294275203D527A00EA4724 /* ContributorsRouter.swift in Sources */,
 				BE21F0C71E6D7D8C005CE72B /* AuthTextDataSource.swift in Sources */,
+				6B29426C203D4E2800EA4724 /* Credentials.swift in Sources */,
 				278DA2951E728DFA00B20DE5 /* AuthPresenter.swift in Sources */,
+				6B294279203D527A00EA4724 /* ContributorsTableCell.swift in Sources */,
 				BE21F0B61E6D74DE005CE72B /* Resource.swift in Sources */,
-				BE21F0F01E7066E0005CE72B /* Credentials.swift in Sources */,
 				278DA28E1E728B9300B20DE5 /* ReposRouter.swift in Sources */,
 				278DA2931E728DE900B20DE5 /* AuthInterface.swift in Sources */,
 				BEB9E8AD1ED275460057329D /* DispatchOnce.swift in Sources */,
 				BEB9E8B41ED276270057329D /* CollectionExtension.swift in Sources */,
 				BEB9E8A31ED275190057329D /* Reusable.swift in Sources */,
 				BEB9E8B01ED275460057329D /* URL+Param.swift in Sources */,
+				6B294276203D527A00EA4724 /* ContributorsPresenter.swift in Sources */,
 				BEB90C3E1E73FE8900505F87 /* SRepoPresenter.swift in Sources */,
+				6B294274203D527A00EA4724 /* ContributorsViewController.swift in Sources */,
 				BEB90C421E74042400505F87 /* Owner.swift in Sources */,
 				BE21F0BE1E6D78D7005CE72B /* AuthViewController.swift in Sources */,
 				BEB9E8A11ED275190057329D /* Alarming.swift in Sources */,
+				6B294277203D527A00EA4724 /* ContributorsInterface.swift in Sources */,
 				BEB9E8B21ED2755F0057329D /* NotificationCenter.swift in Sources */,
 				278DA2AA1E72A50400B20DE5 /* RepoTableCell.swift in Sources */,
 				BE21F0BA1E6D7767005CE72B /* Strings.swift in Sources */,
 				BEB90C3F1E73FE8900505F87 /* SRepoInterface.swift in Sources */,
 				BEB9E8AE1ED275460057329D /* Response+Marshal.swift in Sources */,
-				BE21F0C51E6D7B99005CE72B /* GithubService.swift in Sources */,
 				BEB90C3D1E73FE8900505F87 /* SRepoRouter.swift in Sources */,
 				278DA29D1E72929F00B20DE5 /* ReposPresenter.swift in Sources */,
 				BE21F0C01E6D78E6005CE72B /* AuthRouter.swift in Sources */,
 				278DA28C1E728B8200B20DE5 /* ReposViewController.swift in Sources */,
 				278DA29F1E7292FB00B20DE5 /* ReposInteractor.swift in Sources */,
 				BEB90C461E7418E500505F87 /* StatView.swift in Sources */,
+				6B294278203D527A00EA4724 /* ContributorsInteractor.swift in Sources */,
 				278DA2891E728B0600B20DE5 /* MainTabbarController.swift in Sources */,
 				BEB90C3C1E73FE8900505F87 /* SRepoViewController.swift in Sources */,
 				276C3BE81E6D661000814B2E /* AppDelegate.swift in Sources */,
@@ -543,7 +611,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -551,7 +621,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -592,7 +666,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -600,7 +676,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -632,11 +712,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GitKeek/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KS.GitKeek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -648,11 +728,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GitKeek/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KS.GitKeek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

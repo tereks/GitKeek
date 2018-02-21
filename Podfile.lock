@@ -1,51 +1,41 @@
 PODS:
-  - Alamofire (4.4.0)
-  - Cartography (1.1.0)
-  - Kingfisher (3.9.1)
+  - Alamofire (4.6.0)
+  - Cartography (3.0.1)
+  - Kingfisher (4.6.2)
   - Marshal (1.2.4)
-  - Moya (8.0.4):
-    - Moya/Core (= 8.0.4)
-  - Moya/Core (8.0.4):
+  - Moya (11.0.0):
+    - Moya/Core (= 11.0.0)
+  - Moya/Core (11.0.0):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
-  - PKHUD (4.2.2)
-  - PromiseKit (4.2.0):
-    - PromiseKit/Foundation (= 4.2.0)
-    - PromiseKit/QuartzCore (= 4.2.0)
-    - PromiseKit/UIKit (= 4.2.0)
-  - PromiseKit/CorePromise (4.2.0)
-  - PromiseKit/Foundation (4.2.0):
-    - PromiseKit/CorePromise
-  - PromiseKit/QuartzCore (4.2.0):
-    - PromiseKit/CorePromise
-  - PromiseKit/UIKit (4.2.0):
-    - PromiseKit/CorePromise
-  - PTPopupWebView (0.4.0)
-  - Result (3.2.2)
-  - SwiftRichString (0.9.8)
+  - PKHUD (5.0.0)
+  - PromisesObjC (1.0.3)
+  - PromisesSwift (1.0.3):
+    - PromisesObjC (= 1.0.3)
+  - Result (3.2.4)
+  - SwiftRichString (1.1.0)
 
 DEPENDENCIES:
-  - Cartography (~> 1.0)
-  - Kingfisher (~> 3.0)
-  - Marshal (~> 1.0)
-  - Moya (~> 8.0)
-  - PKHUD (~> 4.0)
-  - PromiseKit (~> 4.0)
-  - PTPopupWebView (~> 0.4.0)
-  - SwiftRichString
+  - Cartography
+  - Kingfisher
+  - Marshal
+  - Moya (= 11.0.0)
+  - PKHUD
+  - PromisesSwift (= 1.0.3)
+  - SwiftRichString (= 1.1.0)
 
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  Cartography: '0538ccb4044acbbda2266335fc58cb4228794d90'
-  Kingfisher: 6729a0baaa458245bfb8cd5a1296c71c10d6eb6c
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Cartography: f8c899bb0f5cf20758644a8eea59a75e98a03a5d
+  Kingfisher: 55b9c395bf8d3949676ad3861111923990ab68cf
   Marshal: 8e04e6624e506921db7143b0bfd83caee03f32d6
-  Moya: a08bc060c7a44eee27447b239ed33a189b641e2b
-  PKHUD: 9a3599e04d57676ec14746c40e423a52fb6588c0
-  PromiseKit: '08dfb783c161ddcd95b7912421f14c5113fd8318'
-  PTPopupWebView: 9db92ddc0629ed735dee23d4388d67b18158d55c
-  Result: 4edd39003fdccf281d418ee1b006571f70123250
-  SwiftRichString: d42eeaefceea340e27b8a33945e0fac1ee21f58f
+  Moya: be29766339783963a70d1279d69c891ab3a1393c
+  PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
+  PromisesObjC: 9b58f509a9dc23d9a3f01b6aeb2cb9416ade3d41
+  PromisesSwift: fec7ae00af032da2ba3172c8a5468ad9bbf83160
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  SwiftRichString: 49c75726140c7f780fad1d067f804491d51188fa
 
-PODFILE CHECKSUM: f9faaa6aabe0902a64ac1553db12cf477ebbe107
+PODFILE CHECKSUM: 0e07a9a67098fea81db4048febb215ac6f6cd892
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.4.0

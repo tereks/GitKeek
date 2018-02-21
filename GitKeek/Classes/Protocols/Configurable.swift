@@ -10,5 +10,5 @@ import Foundation
 
 protocol Configurable: CollectionCell {
     associatedtype DataType: Any
-    func config(withData data: DataType)
+    func configure(with data: DataType)
 }

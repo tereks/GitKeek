@@ -7,20 +7,16 @@
 //
 
 import UIKit
-import PTPopupWebView
-import PromiseKit
+import Promises
 import PKHUD
+import SafariServices
 
 final class AuthViewController: UIViewController, AuthInterface {
 
-    @IBOutlet weak var authButton: UIButton!
-    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet private var authButton: UIButton!
+    @IBOutlet private var descLabel: UILabel!
     
     var presenter: AuthPresenter!
-    
-    let popupvc = PTPopupWebViewController()
-        .popupAppearStyle(.pop(0.2, true))
-        .popupDisappearStyle(.pop(0.2, true))
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -40,8 +36,8 @@ final class AuthViewController: UIViewController, AuthInterface {
         authButton.setAttributedTitle(text, for: .normal)
     }
     
-    func hidePopup() {
-        popupvc.close()
+    func hideBrowser() {
+        dismiss(animated: false, completion: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -50,9 +46,12 @@ final class AuthViewController: UIViewController, AuthInterface {
     }
     
     @IBAction func authButtonSelected(_ sender: Any) {
-        let oauthAddress = GithubService.shared.authorizeAddress(withClientId: R.Credentials.clientId)
-        let _ = popupvc.popupView.URL(string: oauthAddress)
-        let _ = popupvc.popupView.addExternalLinkPattern(.URLScheme)
-        popupvc.show()
+        presenter.onAuthButtonAction()
+    }
+    
+    func openBrowser(url: URL) {
+        let svc = SFSafariViewController(url: url, entersReaderIfAvailable: false)
+        svc.preferredControlTintColor = .white
+        present(svc, animated: true, completion: nil)
     }
 }

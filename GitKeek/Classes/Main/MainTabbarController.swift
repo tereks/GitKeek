@@ -16,7 +16,8 @@ class MainTabbarController: UITabBarController {
     }
     
     private func controllers() -> [UIViewController] {
-        let repos = ReposRouter.controller()        
-        return [repos]
+        let repos = ReposRouter.controller()
+        let contributorsRouter = ContributorsRouter.controller()
+        return [repos, contributorsRouter]
     }
 }

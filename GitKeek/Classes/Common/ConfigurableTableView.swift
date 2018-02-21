@@ -25,11 +25,17 @@ UITableViewDelegate where Cell: Configurable {
         return tableView
     }()
     
+    private var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        return refreshControl
+    }()
+    
     var data = [DataType]() {
         didSet {
-            self.tableView.reloadData()
-            if self.tableView.numberOfRows(inSection: 0) > 0 {
-                self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+            refreshControl.endRefreshing()
+            tableView.reloadData()
+            if tableView.numberOfRows(inSection: 0) > 0 {
+                tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
             }
         }
     }
@@ -44,17 +50,24 @@ UITableViewDelegate where Cell: Configurable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(self.tableView)        
-        self.view.setNeedsUpdateConstraints()
+        view.addSubview(self.tableView)
+        
+        tableView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: #selector(refreshPulled), for: .valueChanged)
+        view.setNeedsUpdateConstraints()
     }
     
     override func updateViewConstraints() {
-        constrain(self.view, self.tableView) {
+        constrain(view, tableView) {
             superview, tableView in            
             tableView.edges == superview.edges
         }
         
         super.updateViewConstraints()
+    }
+    
+    @objc func refreshPulled() {
+        refreshControl.endRefreshing()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,7 +77,7 @@ UITableViewDelegate where Cell: Configurable {
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(indexPath: indexPath) as Cell
-        cell.config(withData: data[indexPath.row])
+        cell.configure(with: data[indexPath.row])
         return cell
     }
     

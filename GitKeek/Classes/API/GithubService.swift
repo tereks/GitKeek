@@ -8,13 +8,15 @@
 
 import UIKit
 import Moya
-import PromiseKit
+import Promises
 import Marshal
-
+import Alamofire
+import Promises
 
 enum Github {
     case accessToken(credentials: Credentials)
     case repos
+    case contributors
 }
 
 enum ApiError: Swift.Error {
@@ -22,6 +24,7 @@ enum ApiError: Swift.Error {
 }
 
 extension Github: TargetType, AccessTokenAuthorizable {
+    
     var baseURL: URL {
         switch self {
         case .accessToken:
@@ -37,46 +40,33 @@ extension Github: TargetType, AccessTokenAuthorizable {
             return "/login/oauth/access_token"
         case .repos:
             return "/user/repos"
+        case .contributors:
+            return "/repos/videolan/vlc/contributors"
         }
     }
     
     var method: Moya.Method {
-        switch self {
-        case .accessToken, .repos:
-            return .get
-        }
-    }
-    
-    var parameters: [String: Any]? {
-        switch self {
-        case .accessToken(let credentials):
-            return ["client_id": credentials.clientId, 
-                    "client_secret": credentials.clientSecret,
-                    "code": credentials.code]
-        case .repos:
-            return nil
-        }
-    }
-    
-    var shouldAuthorize: Bool {
-        switch self {
-        case .accessToken:
-            return false
-        default:
-            return true
-        }
-    }
-    
-    var parameterEncoding: ParameterEncoding {
-        return URLEncoding.default
+        return .get
     }
     
     var task: Task {
-        return .request
+        switch self {
+        case .accessToken(let credentials):
+            return .requestParameters(parameters: ["client_id": credentials.clientId,
+                                                   "client_secret": credentials.clientSecret,
+                                                   "code": credentials.code],
+                                      encoding: URLEncoding.queryString)
+        default:
+            return .requestPlain
+        }
     }
     
-    var validate: Bool {
-        return true
+    var headers: [String: String]? {
+        return ["Content-type": "application/json"]
+    }
+    
+    var authorizationType: AuthorizationType {
+        return .bearer
     }
     
     public var sampleData: Data {
@@ -99,7 +89,7 @@ final class GithubService {
     let logger = NetworkLoggerPlugin()
     
     func configure() {
-        self.authPlugin = AccessTokenPlugin(token: R.Credentials.accessToken)
+        self.authPlugin = AccessTokenPlugin(tokenClosure: { return R.Credentials.accessToken }())
         self.provider = MoyaProvider<Github>(plugins: [authPlugin, logger])
     }
     
@@ -109,36 +99,52 @@ final class GithubService {
     }
     
     func getAccessToken(credentials: Credentials) -> Promise<String> {
-        
-        return Promise { fulfill, reject in
-            provider.request(.accessToken(credentials: credentials)) { result in
+        return Promise<String> { fulfill, reject in
+            self.provider.request(.accessToken(credentials: credentials)) { result in
                 switch result {
                 case let .success(response):
-                    
+                    var token = ""
                     let value = R.BaseEndpoint + "?\(String(data: response.data, encoding: .utf8)!)"
                     if let pathURL = URL(string: value),
                         let accessToken = pathURL.getParameter(byName: R.Text.accessToken) {
                         
-                        fulfill(accessToken)
-                        return
+                        token = accessToken
                     }
                     
-                    fulfill("")
+                    fulfill(token)
                 case let .failure(error):
                     reject(error)
-                }                
-            }            
+                }
+            }
         }
     }
     
     func getRepos() -> Promise<[Repo]> {
-        return Promise { fulfill, reject in
-            provider.request(.repos) { result in
+        return Promise<[Repo]> { fulfill, reject in
+            self.provider.request(.repos) { result in
                 switch result {
                 case let .success(response):
                     do {
                         let repos: [Repo] = try response.mapArray(of: Repo.self)
                         fulfill(repos)
+                    } catch {
+                        reject(ApiError.ResponseValidationFailed)
+                    }
+                case let .failure(error):
+                    reject(error)
+                }
+            }
+        }
+    }
+    
+    func getContributors() -> Promise<[User]> {
+        return Promise<[User]> { fulfill, reject in
+            self.provider.request(.contributors) { result in
+                switch result {
+                case let .success(response):
+                    do {
+                        let users: [User] = try response.mapArray(of: User.self)
+                        fulfill(users)
                     } catch {
                         reject(ApiError.ResponseValidationFailed)
                     }
