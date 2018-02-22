@@ -10,7 +10,7 @@ import UIKit
 
 final class SRepoRouter {
     
-    class func controller(withRepo repo: Repo) -> SRepoViewController {
+    class func controller(with repo: Repo) -> SRepoViewController {
         
         let controller = SRepoViewController()
         
@@ -27,9 +27,8 @@ final class SRepoRouter {
         return controller
     }
     
-    class func pushMainController(withNavigationController nvc: UINavigationController,
-                                  repo: Repo) {
-        let controller = SRepoRouter.controller(withRepo: repo)
+    class func pushMainController(nvc: UINavigationController, repo: Repo) {
+        let controller = SRepoRouter.controller(with: repo)
         nvc.pushViewController(controller, animated: true)
     }
 }

@@ -9,13 +9,13 @@
 import UIKit
 import SwiftRichString
 
-final class SRepoPresenter {
+final class SRepoPresenter: DefaultPresenter {
 
     weak var view: SRepoInterface!
     var interactor: SRepoInteractor!
     var router: SRepoRouter!
     
-    var repo: Repo!
+    private var repo: Repo
     
     init(withRepo repo: Repo) {
         self.repo = repo
@@ -36,8 +36,5 @@ final class SRepoPresenter {
         }
         self.view.setForks("\(self.repo.forksCount)")
         self.view.setWatchers("\(self.repo.watchersCount)")
-    }
-    
-    func update() {
     }
 }

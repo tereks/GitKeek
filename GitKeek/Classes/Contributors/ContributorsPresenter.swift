@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ContributorsPresenter {
+final class ContributorsPresenter: DefaultPresenter {
 
     weak var view: ContributorsInterface!
     var interactor: ContributorsInteractor!
@@ -20,12 +20,12 @@ final class ContributorsPresenter {
         }
     }
     
-    func setup() {
+    func initialize() {
         view.setViewTitle(R.L10.contributors)
-        reload()
     }
     
-    func update() {
+    func setup() {
+        reload()
     }
     
     func reload() {
@@ -40,5 +40,14 @@ final class ContributorsPresenter {
             self.view.hideHUD()
             self.view.showAlert(withTitle: S.error, message: error.localizedDescription)
         }
+    }
+    
+    func openUser(indexPath: IndexPath) {
+        guard let nvc = (self.view as! UIViewController).navigationController else {
+            return
+        }
+        
+        let сontributors = self.сontributors[indexPath.row]
+        router.openContributorScreen(nvc: nvc, user: сontributors)
     }
 }

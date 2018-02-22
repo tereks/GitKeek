@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ReposPresenter {
+final class ReposPresenter: DefaultPresenter {
 
     weak var view: ReposInterface!
     var interactor: ReposInteractor!
@@ -50,6 +50,6 @@ final class ReposPresenter {
         }
         
         let repo = self.repos[indexPath.row]        
-        self.router.openRepoController(withNavigationController: nvc, repo: repo)
+        self.router.openRepoController(nvc: nvc, repo: repo)
     }
 }

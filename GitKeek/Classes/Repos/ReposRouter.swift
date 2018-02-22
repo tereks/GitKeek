@@ -28,8 +28,7 @@ final class ReposRouter {
         return navController
     }
         
-    func openRepoController(withNavigationController nvc: UINavigationController,
-                            repo: Repo) {
-        SRepoRouter.pushMainController(withNavigationController: nvc, repo: repo)
+    func openRepoController(nvc: UINavigationController, repo: Repo) {
+        SRepoRouter.pushMainController(nvc: nvc, repo: repo)
     }
 }

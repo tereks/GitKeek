@@ -32,6 +32,12 @@
 		6B294277203D527A00EA4724 /* ContributorsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294271203D527900EA4724 /* ContributorsInterface.swift */; };
 		6B294278203D527A00EA4724 /* ContributorsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294272203D527900EA4724 /* ContributorsInteractor.swift */; };
 		6B294279203D527A00EA4724 /* ContributorsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294273203D527900EA4724 /* ContributorsTableCell.swift */; };
+		6B29427D203E56C100EA4724 /* Contributor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B29427C203E56C100EA4724 /* Contributor.storyboard */; };
+		6B294280203E57BC00EA4724 /* SingleContributorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B29427F203E57BC00EA4724 /* SingleContributorController.swift */; };
+		6B294282203E57FA00EA4724 /* SingleContributorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294281203E57FA00EA4724 /* SingleContributorInterface.swift */; };
+		6B294284203E580200EA4724 /* SingleContributorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294283203E580200EA4724 /* SingleContributorPresenter.swift */; };
+		6B294286203E580A00EA4724 /* SingleContributorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294285203E580A00EA4724 /* SingleContributorRouter.swift */; };
+		6B294288203E5C0500EA4724 /* DefaultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B294287203E5C0500EA4724 /* DefaultPresenter.swift */; };
 		BE21F0B61E6D74DE005CE72B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0B51E6D74DE005CE72B /* Resource.swift */; };
 		BE21F0BA1E6D7767005CE72B /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0B91E6D7767005CE72B /* Strings.swift */; };
 		BE21F0BE1E6D78D7005CE72B /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21F0BD1E6D78D7005CE72B /* AuthViewController.swift */; };
@@ -56,7 +62,7 @@
 		BEB90C3E1E73FE8900505F87 /* SRepoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB90C391E73FE8900505F87 /* SRepoPresenter.swift */; };
 		BEB90C3F1E73FE8900505F87 /* SRepoInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB90C3A1E73FE8900505F87 /* SRepoInterface.swift */; };
 		BEB90C401E73FE8900505F87 /* SRepoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB90C3B1E73FE8900505F87 /* SRepoInteractor.swift */; };
-		BEB90C421E74042400505F87 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB90C411E74042400505F87 /* Owner.swift */; };
+		BEB90C421E74042400505F87 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB90C411E74042400505F87 /* User.swift */; };
 		BEB90C441E7417AD00505F87 /* SRepoFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB90C431E7417AD00505F87 /* SRepoFormatter.swift */; };
 		BEB90C461E7418E500505F87 /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB90C451E7418E500505F87 /* StatView.swift */; };
 		BEB9E8A11ED275190057329D /* Alarming.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9E89E1ED275190057329D /* Alarming.swift */; };
@@ -103,6 +109,12 @@
 		6B294271203D527900EA4724 /* ContributorsInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorsInterface.swift; sourceTree = "<group>"; };
 		6B294272203D527900EA4724 /* ContributorsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorsInteractor.swift; sourceTree = "<group>"; };
 		6B294273203D527900EA4724 /* ContributorsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorsTableCell.swift; sourceTree = "<group>"; };
+		6B29427C203E56C100EA4724 /* Contributor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contributor.storyboard; sourceTree = "<group>"; };
+		6B29427F203E57BC00EA4724 /* SingleContributorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleContributorController.swift; sourceTree = "<group>"; };
+		6B294281203E57FA00EA4724 /* SingleContributorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleContributorInterface.swift; sourceTree = "<group>"; };
+		6B294283203E580200EA4724 /* SingleContributorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleContributorPresenter.swift; sourceTree = "<group>"; };
+		6B294285203E580A00EA4724 /* SingleContributorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleContributorRouter.swift; sourceTree = "<group>"; };
+		6B294287203E5C0500EA4724 /* DefaultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPresenter.swift; sourceTree = "<group>"; };
 		83716E37E8627E45E4C989B0 /* Pods-Abstract-GitKeek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract-GitKeek.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract-GitKeek/Pods-Abstract-GitKeek.debug.xcconfig"; sourceTree = "<group>"; };
 		BE21F0B51E6D74DE005CE72B /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		BE21F0B91E6D7767005CE72B /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -128,7 +140,7 @@
 		BEB90C391E73FE8900505F87 /* SRepoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRepoPresenter.swift; sourceTree = "<group>"; };
 		BEB90C3A1E73FE8900505F87 /* SRepoInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRepoInterface.swift; sourceTree = "<group>"; };
 		BEB90C3B1E73FE8900505F87 /* SRepoInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRepoInteractor.swift; sourceTree = "<group>"; };
-		BEB90C411E74042400505F87 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		BEB90C411E74042400505F87 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BEB90C431E7417AD00505F87 /* SRepoFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRepoFormatter.swift; sourceTree = "<group>"; };
 		BEB90C451E7418E500505F87 /* StatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
 		BEB9E89E1ED275190057329D /* Alarming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarming.swift; sourceTree = "<group>"; };
@@ -186,6 +198,7 @@
 				BE21F0B41E6D74CC005CE72B /* Resources */,
 				BE21F0C11E6D7932005CE72B /* Auth.storyboard */,
 				278DA28F1E728CB400B20DE5 /* Main.storyboard */,
+				6B29427C203E56C100EA4724 /* Contributor.storyboard */,
 				276C3BEE1E6D661000814B2E /* Assets.xcassets */,
 				276C3BF01E6D661000814B2E /* LaunchScreen.storyboard */,
 				276C3BF31E6D661000814B2E /* Info.plist */,
@@ -219,7 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				278DA2A11E7293CE00B20DE5 /* Repo.swift */,
-				BEB90C411E74042400505F87 /* Owner.swift */,
+				BEB90C411E74042400505F87 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,6 +267,17 @@
 			path = Contributors;
 			sourceTree = "<group>";
 		};
+		6B29427E203E57A500EA4724 /* Single Contributor */ = {
+			isa = PBXGroup;
+			children = (
+				6B29427F203E57BC00EA4724 /* SingleContributorController.swift */,
+				6B294281203E57FA00EA4724 /* SingleContributorInterface.swift */,
+				6B294283203E580200EA4724 /* SingleContributorPresenter.swift */,
+				6B294285203E580A00EA4724 /* SingleContributorRouter.swift */,
+			);
+			path = "Single Contributor";
+			sourceTree = "<group>";
+		};
 		BE21F0B41E6D74CC005CE72B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +300,7 @@
 				278DA28A1E728B8200B20DE5 /* Repos */,
 				BEB90C361E73FE5700505F87 /* Single Repo */,
 				6B29426D203D527900EA4724 /* Contributors */,
+				6B29427E203E57A500EA4724 /* Single Contributor */,
 				278DA2A01E7293C400B20DE5 /* Models */,
 			);
 			path = Classes;
@@ -338,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				BEB9E8A41ED275320057329D /* Configurable.swift */,
+				6B294287203E5C0500EA4724 /* DefaultPresenter.swift */,
 				BEB9E89E1ED275190057329D /* Alarming.swift */,
 				BEB9E89F1ED275190057329D /* Awaiting.swift */,
 				BEB9E8A01ED275190057329D /* Reusable.swift */,
@@ -433,6 +459,7 @@
 			files = (
 				6B294265203D32A400EA4724 /* Podfile in Resources */,
 				BE21F0D71E6D7DC1005CE72B /* Roboto-Bold.ttf in Resources */,
+				6B29427D203E56C100EA4724 /* Contributor.storyboard in Resources */,
 				BE21F0DB1E6D7DC1005CE72B /* Roboto-LightItalic.ttf in Resources */,
 				BE21F0DD1E6D7DC1005CE72B /* Roboto-MediumItalic.ttf in Resources */,
 				BE21F0D91E6D7DC1005CE72B /* Roboto-Italic.ttf in Resources */,
@@ -548,17 +575,20 @@
 				6B29426C203D4E2800EA4724 /* Credentials.swift in Sources */,
 				278DA2951E728DFA00B20DE5 /* AuthPresenter.swift in Sources */,
 				6B294279203D527A00EA4724 /* ContributorsTableCell.swift in Sources */,
+				6B294288203E5C0500EA4724 /* DefaultPresenter.swift in Sources */,
 				BE21F0B61E6D74DE005CE72B /* Resource.swift in Sources */,
 				278DA28E1E728B9300B20DE5 /* ReposRouter.swift in Sources */,
 				278DA2931E728DE900B20DE5 /* AuthInterface.swift in Sources */,
 				BEB9E8AD1ED275460057329D /* DispatchOnce.swift in Sources */,
 				BEB9E8B41ED276270057329D /* CollectionExtension.swift in Sources */,
+				6B294282203E57FA00EA4724 /* SingleContributorInterface.swift in Sources */,
+				6B294280203E57BC00EA4724 /* SingleContributorController.swift in Sources */,
 				BEB9E8A31ED275190057329D /* Reusable.swift in Sources */,
 				BEB9E8B01ED275460057329D /* URL+Param.swift in Sources */,
 				6B294276203D527A00EA4724 /* ContributorsPresenter.swift in Sources */,
 				BEB90C3E1E73FE8900505F87 /* SRepoPresenter.swift in Sources */,
 				6B294274203D527A00EA4724 /* ContributorsViewController.swift in Sources */,
-				BEB90C421E74042400505F87 /* Owner.swift in Sources */,
+				BEB90C421E74042400505F87 /* User.swift in Sources */,
 				BE21F0BE1E6D78D7005CE72B /* AuthViewController.swift in Sources */,
 				BEB9E8A11ED275190057329D /* Alarming.swift in Sources */,
 				6B294277203D527A00EA4724 /* ContributorsInterface.swift in Sources */,
@@ -574,6 +604,8 @@
 				278DA29F1E7292FB00B20DE5 /* ReposInteractor.swift in Sources */,
 				BEB90C461E7418E500505F87 /* StatView.swift in Sources */,
 				6B294278203D527A00EA4724 /* ContributorsInteractor.swift in Sources */,
+				6B294286203E580A00EA4724 /* SingleContributorRouter.swift in Sources */,
+				6B294284203E580200EA4724 /* SingleContributorPresenter.swift in Sources */,
 				278DA2891E728B0600B20DE5 /* MainTabbarController.swift in Sources */,
 				BEB90C3C1E73FE8900505F87 /* SRepoViewController.swift in Sources */,
 				276C3BE81E6D661000814B2E /* AppDelegate.swift in Sources */,

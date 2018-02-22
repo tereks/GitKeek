@@ -25,6 +25,12 @@ final class ContributorsRouter {
         presenter.router = router
         presenter.interactor = interactor
         
+        presenter.initialize()
         return navController
+    }
+    
+    func openContributorScreen(nvc: UINavigationController, user: User) {
+        let controller = SingleContributorRouter.controller(with: user)
+        nvc.pushViewController(controller, animated: true)
     }
 }

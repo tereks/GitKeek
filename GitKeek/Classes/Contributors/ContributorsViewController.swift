@@ -26,7 +26,6 @@ final class ContributorsViewController: ConfigurableTableViewController<Contribu
     
     func setViewTitle(_ title: String) {
         self.title = title
-        self.tabBarItem.title = title
     }
     
     func reloadContributors() {
@@ -43,5 +42,7 @@ final class ContributorsViewController: ConfigurableTableViewController<Contribu
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        presenter.openUser(indexPath: indexPath)
     }
 }
